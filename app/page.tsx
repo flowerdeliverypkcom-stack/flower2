@@ -8,23 +8,24 @@ import { CATEGORIES } from '@/data/categories';
 import { OCCASIONS } from '@/data/occasions';
 import { FAQS } from '@/data/faqs';
 import { useCart } from '@/context/CartContext';
-import Hero3DFlowers from '@/components/3d/Hero3DFlowers';
+import HeroCarousel from '@/components/home/HeroCarousel';
+import InstagramFeed from '@/components/home/InstagramFeed';
 import ProductGrid from '@/components/product/ProductGrid';
-import MagneticButton from '@/components/ui/MagneticButton';
 import WhatsAppOrderButton from '@/components/product/WhatsAppOrderButton';
 import OccasionReminder from '@/components/ui/OccasionReminder';
 import { getFAQSchema } from '@/utils/schema';
+import { Occasion } from '@/types';
 import {
   Search,
-  Sparkles,
   ChevronDown,
   ChevronUp,
   Star,
-  Flower2,
   Video,
-  Truck,
-  ShieldCheck,
-  Globe2,
+  Cake,
+  Heart,
+  Sparkles,
+  Gift,
+  Flower2,
   ArrowRight,
 } from 'lucide-react';
 
@@ -66,125 +67,8 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      {/* ================= HERO SECTION ================= */}
-      <section className="relative pt-6 sm:pt-10 pb-14 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden min-h-[580px] sm:min-h-[640px] lg:min-h-[560px]">
-        {/* Ambient Warm Backlights */}
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-rose-200/25 rounded-full blur-3xl pointer-events-none -z-10" />
-        <div className="absolute top-1/3 right-10 w-96 h-96 bg-amber-100/35 rounded-full blur-3xl pointer-events-none -z-10" />
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
-          {/* Left Column: Headlines, Value Prop & CTA */}
-          <div className="space-y-6 text-center lg:text-left z-10">
-            {/* Top Luxury Atelier Tag */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-[#C5A880]/50 text-xs font-semibold tracking-wide shadow-xs">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#C5A880]"></span>
-              </span>
-              <span className="text-[#8B1538] font-bold uppercase tracking-wider text-[11px]">
-                Pakistan&apos;s Premier Luxury Florist
-              </span>
-              <span className="hidden sm:inline text-stone-300">•</span>
-              <span className="hidden sm:inline text-stone-500 font-normal">Est. 2024</span>
-            </div>
-
-            {/* Main Editorial Headline */}
-            <h1 className="font-serif text-3xl xs:text-4xl sm:text-5xl lg:text-[54px] font-bold tracking-tight text-[#1F1F1F] leading-[1.14]">
-              Fresh Luxury Blooms &amp;{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8B1538] via-[#a81c45] to-[#70102b] italic font-normal">
-                Curated Gifts
-              </span>
-              <span className="block text-xl sm:text-2xl lg:text-3xl text-stone-700 font-normal mt-2">
-                Delivered Same-Day in <strong className="font-serif font-bold text-[#8B1538]">2–3 Hours</strong>
-              </span>
-            </h1>
-
-            {/* Subtitle / Value Proposition */}
-            <p className="text-sm sm:text-base lg:text-lg text-stone-600 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              Order farm-fresh Ecuadorian roses, velvet keepsake boxes &amp; artisan cakes across Lahore, Karachi, Islamabad &amp; nationwide. Every bouquet comes with a <strong className="text-stone-900 font-semibold">live WhatsApp HD video preview</strong> sent before dispatch!
-            </p>
-
-            {/* City Delivery Availability Tags */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-0.5">
-              <span className="text-xs font-semibold text-stone-700 flex items-center gap-1">
-                <Truck className="w-3.5 h-3.5 text-[#8B1538]" /> Same-Day Chilled Delivery:
-              </span>
-              {[
-                { name: 'Lahore', href: '/flower-delivery-lahore' },
-                { name: 'Karachi', href: '/flower-delivery-karachi' },
-                { name: 'Islamabad', href: '/flower-delivery-islamabad' },
-                { name: 'Rawalpindi', href: '/flower-delivery-rawalpindi' },
-              ].map((city) => (
-                <Link
-                  key={city.name}
-                  href={city.href}
-                  className="px-2.5 py-0.5 rounded-full bg-white hover:bg-[#8B1538] text-stone-700 hover:text-white border border-[#C5A880]/30 hover:border-[#8B1538] transition-all text-xs font-medium shadow-xs"
-                >
-                  {city.name}
-                </Link>
-              ))}
-            </div>
-
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-2">
-              <MagneticButton href="/red-rose-bouquets" className="w-full sm:w-auto">
-                <span className="w-full sm:w-auto py-3.5 sm:py-4 px-7 rounded-full bg-[#8B1538] hover:bg-[#6e102c] text-white font-semibold text-sm shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 group">
-                  <Flower2 className="w-4 h-4 text-[#C5A880]" />
-                  <span>Explore Bouquets</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </MagneticButton>
-
-              <WhatsAppOrderButton
-                productName="Fresh Rose Bouquet & Gift Order"
-                price={4499}
-                variant="hero"
-                label="WhatsApp VIP Concierge"
-              />
-            </div>
-
-            {/* Trust Matrix: 4 Sleek Glassmorphic Micro-Cards */}
-            <div className="pt-6 border-t border-[#C5A880]/30 grid grid-cols-2 sm:grid-cols-4 gap-3 text-left">
-              <div className="p-3 rounded-2xl bg-white/85 border border-[#C5A880]/30 shadow-xs hover:shadow-md transition-shadow">
-                <div className="flex items-center gap-1.5 mb-1 text-emerald-800 font-serif font-bold text-xs sm:text-sm">
-                  <Video className="w-4 h-4 text-[#25D366] flex-shrink-0" />
-                  <span>Live Video Proof</span>
-                </div>
-                <p className="text-[11px] text-stone-500 leading-tight">Sent to WhatsApp before dispatch</p>
-              </div>
-
-              <div className="p-3 rounded-2xl bg-white/85 border border-[#C5A880]/30 shadow-xs hover:shadow-md transition-shadow">
-                <div className="flex items-center gap-1.5 mb-1 text-[#8B1538] font-serif font-bold text-xs sm:text-sm">
-                  <Truck className="w-4 h-4 text-[#8B1538] flex-shrink-0" />
-                  <span>2–3h Express</span>
-                </div>
-                <p className="text-[11px] text-stone-500 leading-tight">Same-day chilled van delivery</p>
-              </div>
-
-              <div className="p-3 rounded-2xl bg-white/85 border border-[#C5A880]/30 shadow-xs hover:shadow-md transition-shadow">
-                <div className="flex items-center gap-1.5 mb-1 text-amber-800 font-serif font-bold text-xs sm:text-sm">
-                  <ShieldCheck className="w-4 h-4 text-amber-600 flex-shrink-0" />
-                  <span>100% Fresh Stems</span>
-                </div>
-                <p className="text-[11px] text-stone-500 leading-tight">Hand-cut Grade-A farm roses</p>
-              </div>
-
-              <div className="p-3 rounded-2xl bg-white/85 border border-[#C5A880]/30 shadow-xs hover:shadow-md transition-shadow">
-                <div className="flex items-center gap-1.5 mb-1 text-blue-900 font-serif font-bold text-xs sm:text-sm">
-                  <Globe2 className="w-4 h-4 text-blue-600 flex-shrink-0" />
-                  <span>Worldwide Pay</span>
-                </div>
-                <p className="text-[11px] text-stone-500 leading-tight">UK, US, UAE cards, Wise & Remitly</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Column: 3D Mouse Parallax & Interactive Showcase */}
-          <div className="relative flex justify-center w-full min-h-[430px] sm:min-h-[480px] md:min-h-[500px]">
-            <Hero3DFlowers />
-          </div>
-        </div>
-      </section>
+      {/* ================= HERO CAROUSEL BANNER ================= */}
+      <HeroCarousel />
 
       {/* ================= INTERACTIVE SEARCH BAR ================= */}
       <section className="px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
@@ -251,30 +135,20 @@ export default function HomePage() {
       </section>
 
       {/* ================= OCCASIONS SECTION ================= */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white border-y border-[#C5A880]/20">
+      <section className="py-14 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-[#FAF7F2]/60 to-white border-y border-[#C5A880]/20">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-xs uppercase tracking-widest text-[#8B1538] font-bold block mb-2">Celebrations & Moments</span>
-            <h2 className="text-3xl sm:text-4xl font-bold font-serif text-[#1F1F1F]">Shop By Occasion</h2>
-            <p className="text-sm text-gray-600 mt-2">Find the perfect floral arrangement tailored for every memorable Pakistani celebration.</p>
+          <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
+            <span className="text-xs uppercase tracking-widest text-[#8B1538] font-bold block mb-2">Celebrations &amp; Moments</span>
+            <h2 className="text-2xl sm:text-4xl font-bold font-serif text-[#1F1F1F]">Shop By Occasion</h2>
+            <p className="text-xs sm:text-sm text-stone-600 mt-2 max-w-xl mx-auto leading-relaxed">
+              Find the perfect floral arrangement tailored for every memorable Pakistani celebration with same-day express delivery.
+            </p>
             <div className="w-16 h-0.5 bg-[#C5A880] mx-auto mt-4" />
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 lg:gap-5">
             {OCCASIONS.map((occ) => (
-              <Link
-                key={occ.slug}
-                href={`/${occ.slug}`}
-                className="p-5 rounded-2xl bg-[#FAFAFA] border border-[#C5A880]/30 shadow-sm hover:shadow-xl hover:border-[#8B1538] hover:-translate-y-1 transition-all text-center flex flex-col items-center justify-center group"
-              >
-                <div className="w-12 h-12 rounded-full bg-white text-[#8B1538] group-hover:bg-[#8B1538] group-hover:text-[#C5A880] flex items-center justify-center text-xl mb-3 transition-colors shadow-sm">
-                  🌸
-                </div>
-                <h3 className="font-serif font-bold text-sm text-[#1F1F1F] group-hover:text-[#8B1538]">
-                  {occ.name}
-                </h3>
-                <span className="text-[11px] text-[#8B1538] font-bold mt-1">View Flowers →</span>
-              </Link>
+              <OccasionCard key={occ.slug} occ={occ} />
             ))}
           </div>
         </div>
@@ -379,6 +253,8 @@ export default function HomePage() {
               >
                 <button
                   onClick={() => setOpenFaqIndex(isOpen ? null : index)}
+                  aria-expanded={isOpen}
+                  aria-controls={`faq-answer-${index}`}
                   className="w-full p-5 text-left font-serif font-bold text-base text-[#1F1F1F] flex items-center justify-between gap-4 hover:text-[#8B1538]"
                 >
                   <span>{faq.question}</span>
@@ -388,14 +264,60 @@ export default function HomePage() {
                     <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
                   )}
                 </button>
-                {isOpen && (
-                  <div className="px-5 pb-5 text-sm text-gray-600 leading-relaxed border-t border-gray-100 pt-3">
-                    {faq.answer}
-                  </div>
-                )}
+                {/* Always rendered in DOM for Googlebot & SEO indexing */}
+                <div
+                  id={`faq-answer-${index}`}
+                  className={`px-5 text-sm text-gray-600 leading-relaxed border-t border-gray-100 transition-all duration-200 ${
+                    isOpen ? 'pb-5 pt-3 block' : 'hidden'
+                  }`}
+                >
+                  <p>{faq.answer}</p>
+                </div>
               </div>
             );
           })}
+        </div>
+      </section>
+
+      {/* ================= INSTAGRAM LIVE FEED & REELS ================= */}
+      <InstagramFeed />
+
+      {/* ================= ABOUT FLOWERDELIVERYPK SEO CONTENT BLOCK ================= */}
+      <section className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="p-8 sm:p-12 rounded-3xl bg-white border border-[#C5A880]/40 shadow-lg space-y-6">
+          <div className="space-y-3">
+            <span className="text-xs uppercase tracking-widest text-[#8B1538] font-bold block">
+              Pakistan’s Premier Online Florist
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#1F1F1F]">
+              About FlowerDeliveryPK.com — Fresh Flower &amp; Luxury Gift Delivery
+            </h2>
+            <div className="w-16 h-0.5 bg-[#C5A880] mb-6" />
+          </div>
+
+          <div className="text-stone-700 text-sm sm:text-base leading-relaxed space-y-4">
+            <p>
+              FlowerDeliveryPK.com is Pakistan&apos;s online destination for fresh flower bouquets, luxury gift boxes, and cake-and-flower combos, delivering same-day across Lahore, Karachi, Islamabad, Rawalpindi, and other major cities. Every order is hand-arranged by our florists on the day it ships — never pre-made or pulled from cold storage — and we send a live WhatsApp video of your exact bouquet before it leaves our studio, so you know exactly what you&apos;re getting before it&apos;s on its way.
+            </p>
+            <p>
+              Whether you&apos;re sending red roses for an anniversary, a birthday cake-and-flower combo, or a corporate gift hamper, our collections cover every occasion: birthdays, anniversaries, Valentine&apos;s Day, Mother&apos;s Day, congratulations, and get-well-soon gifts. We also make it simple for overseas Pakistanis in the UK, US, and UAE to send flowers home, with support for international payment methods like Wise and Remitly alongside local cards and bank transfers.
+            </p>
+            <p>
+              Orders can be placed directly through our website or confirmed instantly over WhatsApp, with our team available to help with custom requests, bulk orders, and same-day delivery timing. From Lahore&apos;s DHA and Gulberg to Karachi&apos;s Clifton and Islamabad&apos;s F-sectors, FlowerDeliveryPK.com brings fresh, farm-quality blooms to your doorstep — delivered with love, backed by a freshness guarantee.
+            </p>
+          </div>
+
+          {/* City Quick Internal Links */}
+          <div className="pt-4 border-t border-[#C5A880]/20 flex flex-wrap gap-3 items-center text-xs text-stone-600">
+            <span className="font-semibold text-stone-800">Same-Day City Delivery:</span>
+            <Link href="/flower-delivery-lahore" className="underline hover:text-[#8B1538]">Lahore Flower Delivery</Link>
+            <span>•</span>
+            <Link href="/flower-delivery-karachi" className="underline hover:text-[#8B1538]">Karachi Flower Delivery</Link>
+            <span>•</span>
+            <Link href="/flower-delivery-islamabad" className="underline hover:text-[#8B1538]">Islamabad Flower Delivery</Link>
+            <span>•</span>
+            <Link href="/flower-delivery-rawalpindi" className="underline hover:text-[#8B1538]">Rawalpindi Flower Delivery</Link>
+          </div>
         </div>
       </section>
     </div>
@@ -403,7 +325,7 @@ export default function HomePage() {
 }
 
 function CategoryCard({ cat }: { cat: { slug: string; name: string; image: string; itemCount: number } }) {
-  const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=360&q=70';
+  const FALLBACK_IMAGE = '/images/banners/hero-slide-1.webp';
   const [imgSrc, setImgSrc] = useState(cat.image);
 
   return (
@@ -427,6 +349,66 @@ function CategoryCard({ cat }: { cat: { slug: string; name: string; image: strin
         <h3 className="font-serif text-lg font-bold group-hover:text-[#C5A880] transition-colors">
           {cat.name}
         </h3>
+      </div>
+    </Link>
+  );
+}
+
+const OCCASION_ICONS: Record<string, React.ElementType> = {
+  Cake: Cake,
+  Heart: Heart,
+  Sparkles: Sparkles,
+  Gift: Gift,
+  Flower2: Flower2,
+};
+
+function OccasionCard({ occ }: { occ: Occasion }) {
+  const FALLBACK_IMAGE = '/images/banners/hero-slide-1.webp';
+  const [imgSrc, setImgSrc] = useState(occ.bannerImage);
+  const IconComponent = OCCASION_ICONS[occ.iconName] || Sparkles;
+
+  return (
+    <Link
+      href={`/${occ.slug}`}
+      className="group relative h-64 sm:h-72 lg:h-80 rounded-2xl sm:rounded-3xl overflow-hidden border border-[#C5A880]/30 shadow-md hover:shadow-2xl hover:border-[#8B1538] transition-all duration-500 flex flex-col justify-between p-4 sm:p-5 text-white block bg-stone-900"
+    >
+      {/* Background Floral Photography */}
+      <Image
+        src={imgSrc}
+        alt={`${occ.name} Flowers Delivery Pakistan`}
+        fill
+        sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw"
+        className="object-cover group-hover:scale-110 transition-transform duration-700 filter brightness-90 contrast-105"
+        onError={() => setImgSrc(FALLBACK_IMAGE)}
+      />
+
+      {/* Luxury Multi-Stop Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-black/20 group-hover:via-black/35 transition-all duration-300" />
+
+      {/* Top Header: Unique Occasion Icon & Curated Badge */}
+      <div className="relative z-10 flex items-center justify-between gap-1.5">
+        <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center shadow-md group-hover:bg-[#8B1538] group-hover:text-[#C5A880] group-hover:border-[#C5A880] transition-all flex-shrink-0">
+          <IconComponent className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:text-[#C5A880]" />
+        </div>
+        {occ.badge && (
+          <span className="px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[9px] sm:text-[10px] font-bold text-[#F3E5AB] tracking-wide uppercase shadow-xs truncate max-w-[110px]">
+            {occ.badge}
+          </span>
+        )}
+      </div>
+
+      {/* Bottom Content: Occasion Title, Hint, and Animated CTA */}
+      <div className="relative z-10 space-y-1">
+        <h3 className="font-serif text-base sm:text-lg lg:text-xl font-bold text-white group-hover:text-[#F3E5AB] transition-colors leading-tight">
+          {occ.name}
+        </h3>
+        <p className="text-[10px] sm:text-[11px] text-stone-200 line-clamp-1 leading-snug opacity-90 group-hover:opacity-100 transition-opacity">
+          {occ.description.split('.')[0]}
+        </p>
+        <div className="pt-1.5 flex items-center gap-1 text-[11px] sm:text-xs font-bold text-[#C5A880] group-hover:text-white transition-colors">
+          <span>Shop Flowers</span>
+          <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+        </div>
       </div>
     </Link>
   );

@@ -1,8 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
-import { WHATSAPP_BASE_URL, WHATSAPP_NUMBER } from '@/utils/whatsapp';
-import { MessageCircle, Phone, Mail, MapPin, Clock, Send, CheckCircle2 } from 'lucide-react';
+import { WHATSAPP_BASE_URL, WHATSAPP_NUMBER, WHATSAPP_CHANNEL_URL, INSTAGRAM_URL, INSTAGRAM_HANDLE } from '@/utils/whatsapp';
+import { MessageCircle, Phone, Mail, MapPin, Clock, Send, CheckCircle2, Sparkles, ExternalLink } from 'lucide-react';
+import { Instagram } from '@/components/icons/InstagramIcon';
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -47,8 +48,8 @@ export default function ContactPage() {
                 <div className="p-3 rounded-full bg-[#25D366] text-white flex-shrink-0">
                   <MessageCircle className="w-5 h-5 fill-white" />
                 </div>
-                <div>
-                  <span className="text-xs text-gray-400 block font-bold">WhatsApp Order Line</span>
+                <div className="flex-1">
+                  <span className="text-xs text-gray-400 block font-bold">WhatsApp Direct Order Line</span>
                   <a
                     href={WHATSAPP_BASE_URL}
                     target="_blank"
@@ -59,6 +60,54 @@ export default function ContactPage() {
                   </a>
                 </div>
               </div>
+
+              {/* Instagram Official Profile Card */}
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-between gap-4 p-4 rounded-2xl bg-gradient-to-r from-pink-50/70 to-purple-50/70 border border-pink-200/80 hover:shadow-md transition-all group"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="p-3 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white flex-shrink-0 shadow-xs">
+                    <Instagram className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <span className="text-xs text-pink-700 block font-bold flex items-center gap-1">
+                      Official Instagram Studio <CheckCircle2 className="w-3.5 h-3.5 text-sky-500 fill-sky-500" />
+                    </span>
+                    <span className="font-bold text-[#1F1F1F] group-hover:text-[#8B1538] transition-colors">
+                      @{INSTAGRAM_HANDLE}
+                    </span>
+                    <span className="text-[11px] text-stone-500 block">Watch daily live video dispatches &amp; bouquet reels</span>
+                  </div>
+                </div>
+                <ExternalLink className="w-4 h-4 text-stone-400 group-hover:text-[#8B1538] group-hover:translate-x-0.5 transition-all flex-shrink-0 mr-1" />
+              </a>
+
+              {/* WhatsApp VIP Channel Card */}
+              <a
+                href={WHATSAPP_CHANNEL_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-between gap-4 p-4 rounded-2xl bg-[#075E54]/5 border border-emerald-500/30 hover:shadow-md transition-all group"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="p-3 rounded-full bg-[#075E54] text-white flex-shrink-0 shadow-xs">
+                    <Sparkles className="w-5 h-5 text-[#25D366]" />
+                  </div>
+                  <div>
+                    <span className="text-xs text-emerald-800 block font-bold">
+                      WhatsApp VIP Channel (Flash Deals)
+                    </span>
+                    <span className="font-bold text-[#075E54]">
+                      Join FlowerDeliveryPK Official Channel
+                    </span>
+                    <span className="text-[11px] text-stone-500 block">Exclusive 20% discount codes &amp; morning drops</span>
+                  </div>
+                </div>
+                <ExternalLink className="w-4 h-4 text-emerald-600 group-hover:translate-x-0.5 transition-all flex-shrink-0 mr-1" />
+              </a>
 
               <div className="flex items-center gap-4 p-4 rounded-2xl bg-[#FAF7F2] border border-gray-200">
                 <div className="p-3 rounded-full bg-[#1E392A] text-[#D4AF37] flex-shrink-0">
@@ -158,7 +207,7 @@ export default function ContactPage() {
                   required
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  placeholder="e.g. 0320-1234567"
+                  placeholder="e.g. 0348-1234567"
                   className="w-full bg-[#FAF7F2] border border-gray-200 rounded-xl p-3 text-sm focus:outline-none focus:border-[#581825]"
                 />
               </div>

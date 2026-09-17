@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Playfair_Display, Inter } from 'next/font/google';
 import './globals.css';
 import { CartProvider } from '@/context/CartContext';
@@ -23,6 +23,13 @@ const inter = Inter({
   variable: '--font-sans',
   display: 'swap',
 });
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: '#8B1538',
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://flowerdeliverypk.com'),
@@ -63,21 +70,21 @@ export const metadata: Metadata = {
     url: 'https://flowerdeliverypk.com',
     siteName: 'FlowerDeliveryPK.com',
     title: 'FlowerDeliveryPK.com — Online Flowers, Bouquets & Gifts Delivery in Pakistan',
-    description: 'Fresh flower bouquets & luxury gifts delivered same-day across Lahore, Karachi, Islamabad & all major cities in Pakistan. Order on WhatsApp: 0320-0411680.',
+    description: 'Fresh flower bouquets & luxury gifts delivered same-day across Lahore, Karachi, Islamabad & all major cities in Pakistan. Order on WhatsApp: 0348-0735344.',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80',
+        url: '/images/banners/hero-slide-1.webp',
         width: 1200,
         height: 630,
-        alt: 'Fresh Red Roses Bouquet Delivery in Pakistan'
+        alt: 'Fresh Red Roses Bouquet Delivery in Pakistan - FlowerDeliveryPK'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
     title: 'FlowerDeliveryPK.com — Luxury Flowers & Gifts Pakistan',
-    description: 'Send red roses, birthday cakes & gift boxes to Lahore, Karachi, Islamabad. Same day delivery via WhatsApp.',
-    images: ['https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80']
+    description: 'Send red roses, birthday cakes & gift boxes to Lahore, Karachi, Islamabad. Same day delivery via WhatsApp: 0348-0735344.',
+    images: ['/images/banners/hero-slide-1.webp']
   },
   robots: {
     index: true,

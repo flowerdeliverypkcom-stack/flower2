@@ -1,4 +1,5 @@
 import { BlogPost, Product } from '@/types';
+import { INSTAGRAM_URL, WHATSAPP_CHANNEL_URL, WHATSAPP_BASE_URL } from '@/utils/whatsapp';
 
 export const SITE_URL = 'https://flowerdeliverypk.com';
 export const BRAND_NAME = 'FlowerDeliveryPK.com';
@@ -10,12 +11,16 @@ export function getOrganizationSchema() {
     name: BRAND_NAME,
     url: SITE_URL,
     logo: `${SITE_URL}/logo.png`,
-    sameAs: ['https://wa.me/923200411680'],
+    sameAs: [
+      INSTAGRAM_URL,
+      WHATSAPP_CHANNEL_URL,
+      WHATSAPP_BASE_URL
+    ],
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+92-320-0411680',
+      telephone: '+92-348-0735344',
       contactType: 'customer service',
-      areaServed: 'PK',
+      areaServed: ['Lahore', 'Karachi', 'Islamabad', 'Rawalpindi', 'PK'],
       availableLanguage: ['English', 'Urdu']
     }
   };
@@ -26,11 +31,18 @@ export function getLocalBusinessSchema() {
     '@context': 'https://schema.org',
     '@type': 'Florist',
     name: BRAND_NAME,
-    image: `${SITE_URL}/hero-banner.jpg`,
+    image: `${SITE_URL}/images/banners/hero-slide-1.webp`,
     '@id': SITE_URL,
     url: SITE_URL,
-    telephone: '+92-320-0411680',
+    sameAs: [INSTAGRAM_URL, WHATSAPP_CHANNEL_URL, WHATSAPP_BASE_URL],
+    telephone: '+92-348-0735344',
     priceRange: 'PKR 1499 - 14999',
+    areaServed: [
+      { '@type': 'City', name: 'Lahore' },
+      { '@type': 'City', name: 'Karachi' },
+      { '@type': 'City', name: 'Islamabad' },
+      { '@type': 'City', name: 'Rawalpindi' }
+    ],
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Lahore',

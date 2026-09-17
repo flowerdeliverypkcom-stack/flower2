@@ -49,7 +49,7 @@ export interface Review {
 export interface Category {
   name: string;
   slug: string;
-  group: 'flowers' | 'gifts' | 'cakes';
+  group: 'flowers' | 'gifts' | 'cakes' | 'decor';
   description: string;
   image: string;
   itemCount: number;
@@ -62,6 +62,7 @@ export interface Occasion {
   description: string;
   bannerImage: string;
   iconName: string;
+  badge?: string;
 }
 
 export interface CityTargeting {
@@ -71,9 +72,11 @@ export interface CityTargeting {
   headline: string;
   intro: string;
   deliveryTime: string;
+  deliveryPricing?: string;
   popularAreas: string[];
   bannerImage: string;
   faqs: { question: string; answer: string }[];
+  uniqueContent?: string;
 }
 
 export interface BlogPost {

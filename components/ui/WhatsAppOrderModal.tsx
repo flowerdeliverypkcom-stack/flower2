@@ -3,6 +3,8 @@
 import React, { useState, useId } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, MessageCircle, MapPin, User, ArrowRight, Sparkles, CheckCircle } from 'lucide-react';
+import { Instagram } from '@/components/icons/InstagramIcon';
+import { INSTAGRAM_URL, INSTAGRAM_HANDLE, WHATSAPP_CHANNEL_URL } from '@/utils/whatsapp';
 
 interface WhatsAppOrderModalProps {
   isOpen: boolean;
@@ -251,16 +253,37 @@ export default function WhatsAppOrderModal({
                   </p>
                 </form>
               ) : (
-                <div className="py-8 text-center space-y-3">
-                  <div className="w-16 h-16 rounded-full bg-emerald-100 text-[#25D366] flex items-center justify-center mx-auto animate-bounce">
-                    <CheckCircle className="w-10 h-10" />
+                <div className="py-6 text-center space-y-3">
+                  <div className="w-14 h-14 rounded-full bg-emerald-100 text-[#25D366] flex items-center justify-center mx-auto animate-bounce">
+                    <CheckCircle className="w-8 h-8" />
                   </div>
                   <h4 className="font-serif text-lg font-bold text-gray-800">
                     Opening WhatsApp...
                   </h4>
                   <p className="text-xs text-gray-500 max-w-xs mx-auto">
-                    Your details are saved. Redirecting to our instant WhatsApp support window...
+                    Your details are saved. Redirecting to our WhatsApp concierge...
                   </p>
+
+                  <div className="pt-3 border-t border-gray-100 flex flex-wrap items-center justify-center gap-2">
+                    <a
+                      href={INSTAGRAM_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-1.5 rounded-full bg-gradient-to-r from-[#833ab4] via-[#dc2743] to-[#fcb045] text-white text-[11px] font-bold inline-flex items-center gap-1 shadow-xs"
+                    >
+                      <Instagram className="w-3 h-3" />
+                      <span>Follow @{INSTAGRAM_HANDLE}</span>
+                    </a>
+                    <a
+                      href={WHATSAPP_CHANNEL_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-1.5 rounded-full bg-[#075E54] text-white text-[11px] font-bold inline-flex items-center gap-1 shadow-xs"
+                    >
+                      <Sparkles className="w-3 h-3 text-[#25D366]" />
+                      <span>Join VIP Channel</span>
+                    </a>
+                  </div>
                 </div>
               )}
             </div>

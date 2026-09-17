@@ -3,8 +3,9 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { WHATSAPP_BASE_URL, WHATSAPP_NUMBER } from '@/utils/whatsapp';
+import { WHATSAPP_BASE_URL, WHATSAPP_NUMBER, WHATSAPP_CHANNEL_URL, INSTAGRAM_URL, INSTAGRAM_HANDLE } from '@/utils/whatsapp';
 import { MessageCircle, Heart, Sparkles, ShieldCheck, Truck, Globe } from 'lucide-react';
+import { Instagram } from '@/components/icons/InstagramIcon';
 
 export default function AboutPage() {
   return (
@@ -75,14 +76,32 @@ export default function AboutPage() {
           <p className="text-xs text-gray-600 max-w-lg mx-auto">
             Contact our floral design concierge team on WhatsApp for custom flower box arrangements, wedding stage decor, or corporate gift hampers.
           </p>
-          <a
-            href={WHATSAPP_BASE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 py-3.5 px-8 rounded-full bg-[#25D366] text-white font-bold text-xs hover:bg-[#20bd5a] transition-all shadow-lg"
-          >
-            <MessageCircle className="w-4 h-4 fill-white" /> Chat on WhatsApp ({WHATSAPP_NUMBER})
-          </a>
+          <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+            <a
+              href={WHATSAPP_BASE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 py-3 px-6 rounded-full bg-[#25D366] text-white font-bold text-xs hover:bg-[#20bd5a] transition-all shadow-md"
+            >
+              <MessageCircle className="w-4 h-4 fill-white" /> Chat on WhatsApp ({WHATSAPP_NUMBER})
+            </a>
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 py-3 px-6 rounded-full bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] text-white font-bold text-xs hover:opacity-95 transition-all shadow-md"
+            >
+              <Instagram className="w-4 h-4" /> Instagram @{INSTAGRAM_HANDLE}
+            </a>
+            <a
+              href={WHATSAPP_CHANNEL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 py-3 px-6 rounded-full bg-[#075E54] text-white font-bold text-xs hover:bg-[#054c44] transition-all shadow-md border border-emerald-400/30"
+            >
+              <Sparkles className="w-4 h-4 text-[#25D366]" /> Join VIP Channel
+            </a>
+          </div>
         </div>
       </section>
     </div>

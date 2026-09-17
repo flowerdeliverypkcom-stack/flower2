@@ -3,27 +3,35 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Sparkles, Phone, Video, ShieldCheck, ChevronRight } from 'lucide-react';
-import { WHATSAPP_BASE_URL, WHATSAPP_NUMBER } from '@/utils/whatsapp';
+import { Instagram } from '@/components/icons/InstagramIcon';
+import { WHATSAPP_BASE_URL, WHATSAPP_NUMBER, WHATSAPP_CHANNEL_URL, INSTAGRAM_URL, INSTAGRAM_HANDLE } from '@/utils/whatsapp';
 
 const ANNOUNCEMENTS = [
   {
+    icon: Instagram,
+    text: `Follow @${INSTAGRAM_HANDLE} on Instagram`,
+    highlight: "Watch Live Bouquet Reels & Real Video Proofs",
+    action: "Watch on Instagram",
+    url: INSTAGRAM_URL,
+  },
+  {
     icon: Sparkles,
-    text: "Pakistan's #1 Luxury Florist",
-    highlight: "Live Video Preview Sent on WhatsApp Before Dispatch",
+    text: "Join Our Official WhatsApp Channel",
+    highlight: "Exclusive Flash Deals & Daily Fresh Flower Drops",
+    action: "Follow Channel",
+    url: WHATSAPP_CHANNEL_URL,
+  },
+  {
+    icon: Video,
+    text: "Live Video Preview Before Dispatch",
+    highlight: "We send an HD WhatsApp video of your bouquet before delivery",
     action: "Order on WhatsApp",
     url: WHATSAPP_BASE_URL,
   },
   {
-    icon: Video,
+    icon: ShieldCheck,
     text: "Same-Day Chilled Express Delivery",
     highlight: "Lahore • Karachi • Islamabad • Rawalpindi (2-3 Hours)",
-    action: "View Flowers",
-    url: "/same-day-flower-delivery",
-  },
-  {
-    icon: ShieldCheck,
-    text: "100% Farm Fresh Guarantee",
-    highlight: "Daily Morning Harvest • Grade-A Stems Only",
     action: "Explore Bouquets",
     url: "/red-rose-bouquets",
   }
@@ -94,6 +102,8 @@ export default function AnnouncementBar() {
                   <span className="hidden sm:inline text-[#C5A880]/90">• {current.highlight}</span>
                   <a
                     href={current.url}
+                    target={current.url.startsWith('http') ? '_blank' : undefined}
+                    rel={current.url.startsWith('http') ? 'noopener noreferrer' : undefined}
                     className="inline-flex items-center gap-0.5 text-[#C5A880] hover:text-white font-bold ml-1 transition-colors underline underline-offset-2 decoration-[#C5A880]/50"
                   >
                     <span>{current.action}</span>

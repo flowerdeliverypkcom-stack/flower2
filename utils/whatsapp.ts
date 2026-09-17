@@ -1,7 +1,10 @@
 import { CartItem, Product } from '@/types';
 
-export const WHATSAPP_NUMBER = '0320-0411680';
-export const WHATSAPP_BASE_URL = 'https://wa.me/923200411680';
+export const WHATSAPP_NUMBER = '0348-0735344';
+export const WHATSAPP_BASE_URL = 'https://wa.me/923480735344';
+export const WHATSAPP_CHANNEL_URL = 'https://whatsapp.com/channel/0029Vb7sSZD1iUxgNseBeJ41';
+export const INSTAGRAM_HANDLE = 'flowerdeliverypk';
+export const INSTAGRAM_URL = 'https://www.instagram.com/flowerdeliverypk?stkn=aDFzZTRyemtpZzM3';
 
 /**
  * Build direct WhatsApp order link for a single product with delivery address/date prompt.

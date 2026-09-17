@@ -20,9 +20,7 @@ export const PRODUCTS: Product[] = [
     occasions: ['Anniversary', 'Valentine\'s Day', 'Romantic', 'Birthday'],
     cities: ['Lahore', 'Karachi', 'Islamabad', 'Rawalpindi', 'Faisalabad', 'Multan', 'Peshawar'],
     images: [
-      '/images/products/red_roses_bouquet.webp',
-      'https://images.unsplash.com/photo-1563241527-3004b7be0ffd?auto=format&fit=crop&w=500&q=75',
-      'https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=500&q=75'
+      '/images/products/red_roses_bouquet.webp'
     ],
     flowerDetails: {
       stemCount: 24,
@@ -57,8 +55,7 @@ export const PRODUCTS: Product[] = [
     occasions: ['Anniversary', 'Wedding', 'Valentine\'s Day'],
     cities: ['Lahore', 'Karachi', 'Islamabad', 'Rawalpindi', 'Multan', 'Faisalabad'],
     images: [
-      'https://images.unsplash.com/photo-1563241527-3004b7be0ffd?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=1000&q=80'
+      '/images/products/red_roses_bouquet.webp'
     ],
     flowerDetails: {
       stemCount: 50,
@@ -89,8 +86,7 @@ export const PRODUCTS: Product[] = [
     occasions: ['Anniversary', 'Wedding', 'Valentine\'s Day', 'Romantic'],
     cities: ['Lahore', 'Karachi', 'Islamabad', 'Rawalpindi', 'Multan', 'Faisalabad'],
     images: [
-      '/images/products/red_roses_bouquet.webp',
-      'https://images.unsplash.com/photo-1563241527-3004b7be0ffd?auto=format&fit=crop&w=500&q=75'
+      '/images/products/red_roses_bouquet.webp'
     ],
     flowerDetails: {
       stemCount: 100,
@@ -120,9 +116,7 @@ export const PRODUCTS: Product[] = [
     occasions: ['Wedding', 'Congratulations', 'Get Well Soon', 'Thank You'],
     cities: ['Lahore', 'Karachi', 'Islamabad', 'Rawalpindi', 'Peshawar', 'Sialkot'],
     images: [
-      '/images/products/white_roses_studio.webp',
-      'https://images.unsplash.com/photo-1533616688419-b7a585564566?auto=format&fit=crop&w=500&q=75',
-      'https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=500&q=75'
+      '/images/products/white_roses_studio.webp'
     ],
     flowerDetails: {
       stemCount: 20,
@@ -152,9 +146,7 @@ export const PRODUCTS: Product[] = [
     occasions: ['Birthday', 'Mother\'s Day', 'I\'m Sorry', 'Thank You'],
     cities: ['Lahore', 'Karachi', 'Islamabad', 'Rawalpindi', 'Faisalabad'],
     images: [
-      '/images/products/pink_roses_studio.webp',
-      'https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&w=500&q=75',
-      'https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?auto=format&fit=crop&w=500&q=75'
+      '/images/products/pink_roses_studio.webp'
     ],
     flowerDetails: {
       stemCount: 24,
@@ -184,8 +176,7 @@ export const PRODUCTS: Product[] = [
     occasions: ['Graduation', 'Get Well Soon', 'Congratulations', 'Birthday'],
     cities: ['Lahore', 'Karachi', 'Islamabad', 'Rawalpindi', 'Multan', 'Gujranwala'],
     images: [
-      '/images/products/sunflower_roses.webp',
-      'https://images.unsplash.com/photo-1543257580-7269da773bf5?auto=format&fit=crop&w=500&q=75'
+      '/images/products/sunflower_roses.webp'
     ],
     flowerDetails: {
       stemCount: 7,
@@ -275,7 +266,7 @@ export const PRODUCTS: Product[] = [
     occasions: ['Birthday', 'Valentine\'s Day', 'Get Well Soon'],
     cities: ['Lahore', 'Karachi', 'Islamabad', 'Rawalpindi', 'Multan'],
     images: [
-      'https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&w=1000&q=80'
+      '/images/products/pink_roses_studio.webp'
     ],
     flowerDetails: {
       stemCount: 12,
@@ -305,8 +296,7 @@ export const PRODUCTS: Product[] = [
     occasions: ['Anniversary', 'Birthday', 'Valentine\'s Day', 'Engagement'],
     cities: ['Lahore', 'Karachi', 'Islamabad', 'Rawalpindi', 'Multan', 'Faisalabad', 'Peshawar'],
     images: [
-      'https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1000&q=80'
+      '/images/banners/hero-slide-2.webp'
     ],
     flowerDetails: {
       stemCount: 36,
@@ -336,7 +326,7 @@ export const PRODUCTS: Product[] = [
     occasions: ['Anniversary', 'Valentine\'s Day', 'Wedding'],
     cities: ['Lahore', 'Karachi', 'Islamabad', 'Rawalpindi', 'Faisalabad', 'Multan'],
     images: [
-      'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1000&q=80'
+      '/images/products/red_roses_bouquet.webp'
     ],
     flowerDetails: {
       stemCount: 30,
@@ -366,7 +356,7 @@ export const PRODUCTS: Product[] = [
     occasions: ['Birthday', 'Graduation', 'Thank You', 'I\'m Sorry'],
     cities: ['Lahore', 'Karachi', 'Islamabad', 'Rawalpindi', 'Gujranwala', 'Sialkot'],
     images: [
-      'https://images.unsplash.com/photo-1533616688419-b7a585564566?auto=format&fit=crop&w=1000&q=80'
+      '/images/products/white_roses_studio.webp'
     ],
     flowerDetails: {
       stemCount: 15,
@@ -396,7 +386,7 @@ export const PRODUCTS: Product[] = [
     occasions: ['Anniversary', 'Wedding', 'Congratulations'],
     cities: ['Lahore', 'Karachi', 'Islamabad', 'Rawalpindi'],
     images: [
-      'https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=1000&q=80'
+      '/images/products/white_roses_studio.webp'
     ],
     flowerDetails: {
       stemCount: 18,
@@ -426,7 +416,7 @@ export const PRODUCTS: Product[] = [
     occasions: ['Valentine\'s Day', 'I\'m Sorry', 'Thank You'],
     cities: ['Lahore', 'Karachi', 'Islamabad', 'Rawalpindi', 'Faisalabad', 'Multan', 'Peshawar', 'Gujranwala', 'Sialkot'],
     images: [
-      'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1000&q=80'
+      '/images/products/red_roses_bouquet.webp'
     ],
     flowerDetails: {
       stemCount: 1,
@@ -456,7 +446,7 @@ export const PRODUCTS: Product[] = [
     occasions: ['Graduation', 'Congratulations'],
     cities: ['Lahore', 'Karachi', 'Islamabad', 'Rawalpindi', 'Faisalabad', 'Peshawar'],
     images: [
-      'https://images.unsplash.com/photo-1597848212624-a19eb35e2651?auto=format&fit=crop&w=1000&q=80'
+      '/images/products/sunflower_roses.webp'
     ],
     flowerDetails: {
       stemCount: 16,
@@ -486,7 +476,7 @@ export const PRODUCTS: Product[] = [
     occasions: ['Mother\'s Day', 'Birthday', 'Thank You'],
     cities: ['Lahore', 'Karachi', 'Islamabad', 'Rawalpindi', 'Multan', 'Faisalabad', 'Peshawar', 'Sialkot'],
     images: [
-      'https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&w=1000&q=80'
+      '/images/products/pink_roses_studio.webp'
     ],
     flowerDetails: {
       stemCount: 24,
@@ -516,7 +506,7 @@ export const PRODUCTS: Product[] = [
     occasions: ['Eid', 'Wedding', 'Anniversary', 'Father\'s Day', 'Mother\'s Day'],
     cities: ['Lahore', 'Karachi', 'Islamabad', 'Rawalpindi', 'Faisalabad'],
     images: [
-      'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=1000&q=80'
+      '/images/products/chocolate_flower_hamper.webp'
     ],
     flowerDetails: {
       stemCount: 15,
@@ -546,7 +536,7 @@ export const PRODUCTS: Product[] = [
     occasions: ['Birthday'],
     cities: ['Lahore', 'Karachi', 'Islamabad', 'Rawalpindi', 'Faisalabad', 'Multan'],
     images: [
-      'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1000&q=80'
+      '/images/products/cake_flower_combo.webp'
     ],
     flowerDetails: {
       stemCount: 24,
@@ -576,7 +566,7 @@ export const PRODUCTS: Product[] = [
     occasions: ['Birthday', 'Anniversary', 'Congratulations'],
     cities: ['Lahore', 'Karachi', 'Islamabad', 'Rawalpindi', 'Multan', 'Faisalabad'],
     images: [
-      'https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=1000&q=80'
+      '/images/products/pink_roses_studio.webp'
     ],
     flowerDetails: {
       stemCount: 25,
@@ -606,7 +596,7 @@ export const PRODUCTS: Product[] = [
     occasions: ['Wedding', 'Engagement'],
     cities: ['Lahore', 'Karachi', 'Islamabad', 'Rawalpindi', 'Faisalabad'],
     images: [
-      'https://images.unsplash.com/photo-1533616688419-b7a585564566?auto=format&fit=crop&w=1000&q=80'
+      '/images/products/white_roses_studio.webp'
     ],
     flowerDetails: {
       stemCount: 36,
@@ -615,6 +605,286 @@ export const PRODUCTS: Product[] = [
       lifespan: '6-8 Days'
     },
     dimensions: 'H: 60cm x W: 45cm',
+    inStock: true
+  },
+  {
+    id: 'fb-budget-1',
+    slug: 'pocket-friendly-rose-bunch',
+    name: 'Pocket-Friendly 12 Fresh Roses Bunch',
+    shortDescription: '12 fresh local red roses neatly wrapped in Korean kraft paper with satin ribbon.',
+    description: 'Beautiful, thoughtful, and pocket-friendly! Our 12 Fresh Roses Bunch offers farm-fresh blooms at an unbeatable value. Ideal for casual greetings, spontaneous surprises, and heartfelt congratulations across Pakistan.',
+    price: 2499,
+    originalPrice: 3200,
+    discountPercentage: 22,
+    rating: 4.8,
+    reviewsCount: 89,
+    isBestSeller: true,
+    isFeatured: true,
+    category: 'Budget Bouquets',
+    categorySlug: 'budget-bouquets',
+    flowerTypes: ['Red Roses', 'Gypsophila'],
+    occasions: ['Birthday', 'Thank You', 'Congratulations'],
+    cities: ['Lahore', 'Karachi', 'Islamabad', 'Rawalpindi', 'Faisalabad', 'Multan', 'Peshawar', 'Gujranwala', 'Sialkot', 'All'],
+    images: ['/images/products/red_roses_bouquet.webp'],
+    flowerDetails: {
+      stemCount: 12,
+      wrapperColor: 'Eco Kraft Paper & Red Ribbon',
+      fragrance: 'Delicate Sweet',
+      lifespan: '4-6 Days'
+    },
+    dimensions: 'H: 45cm x W: 30cm',
+    inStock: true
+  },
+  {
+    id: 'fb-jewelry-1',
+    slug: 'fresh-jasmine-bridal-gajray-set',
+    name: 'Handmade Fresh Motia & Rose Bridal Gajray Set',
+    shortDescription: 'Aromatic pure fresh Jasmine (Motia) and red rose petals handcrafted bridal gajray pair.',
+    description: 'Traditional Pakistani wedding elegance! Handcrafted using freshly picked aromatic Motia (Jasmine) buds and velvety red rose petal highlights. Includes 2 wrist gajray with adjustable silk strings for Mayun, Mehndi, or Nikkah ceremonies.',
+    price: 3499,
+    originalPrice: 4500,
+    discountPercentage: 22,
+    rating: 4.9,
+    reviewsCount: 94,
+    isBestSeller: true,
+    isFeatured: true,
+    category: 'Floral Jewelry & Gajray',
+    categorySlug: 'floral-jewelry',
+    flowerTypes: ['Motia Jasmine', 'Red Rose Petals'],
+    occasions: ['Wedding', 'Mehndi', 'Nikkah', 'Mayun'],
+    cities: ['Lahore', 'Karachi', 'Islamabad', 'Rawalpindi', 'Faisalabad', 'Multan', 'Peshawar', 'Gujranwala', 'Sialkot', 'All'],
+    images: ['/images/products/white_roses_studio.webp'],
+    flowerDetails: {
+      stemCount: 50,
+      wrapperColor: 'Velvet Keepsake Pouch',
+      fragrance: 'Intense Natural Motia Fragrance',
+      lifespan: '24-36 Hours Freshness'
+    },
+    dimensions: 'Adjustable Wrist Fit',
+    inStock: true
+  },
+  {
+    id: 'fb-hamper-1',
+    slug: 'royal-celebration-gift-hamper',
+    name: 'Royal Celebration Ferrero & Floral Hamper',
+    shortDescription: '16 Ferrero Rocher chocolates, imported nuts, scented candle, and 12 fresh red roses in a luxury basket.',
+    description: 'The definitive luxury hamper for milestone celebrations. Features 16 pieces of Italian Ferrero Rocher chocolates, a gourmet jar of roasted mixed nuts, a scented soy candle, and a bouquet of fresh red roses in an artisanal wicker basket with ribbon wrap.',
+    price: 8999,
+    originalPrice: 11500,
+    discountPercentage: 22,
+    rating: 5.0,
+    reviewsCount: 67,
+    isBestSeller: true,
+    isFeatured: true,
+    category: 'Luxury Gift Hampers',
+    categorySlug: 'gift-hampers',
+    flowerTypes: ['Red Roses', 'Ferrero Rocher Chocolates', 'Soy Candle'],
+    occasions: ['Birthday', 'Anniversary', 'Eid', 'Congratulations'],
+    cities: ['Lahore', 'Karachi', 'Islamabad', 'Rawalpindi', 'Faisalabad', 'Multan', 'Peshawar', 'Gujranwala', 'Sialkot', 'All'],
+    images: ['/images/products/chocolate_flower_hamper.webp'],
+    flowerDetails: {
+      stemCount: 12,
+      wrapperColor: 'Artisanal Handwoven Wicker Basket',
+      fragrance: 'Chocolate & Sweet Rose Blend',
+      lifespan: '5-7 Days for Flowers'
+    },
+    dimensions: 'H: 50cm x W: 40cm',
+    inStock: true
+  },
+  {
+    id: 'fb-balloon-1',
+    slug: 'happy-birthday-balloon-bunch-box',
+    name: 'Surprise Happy Birthday Helium Balloon & Flower Box',
+    shortDescription: 'Giant custom foil balloon with helium bunch, mini roses, and confetti celebration box.',
+    description: 'Make their birthday pop with joy! Includes an 18-inch metallic Happy Birthday foil balloon, 4 matching latex balloons, and a circular velvet box of fresh mini roses and confetti. Delivered ready to surprise.',
+    price: 3499,
+    originalPrice: 4200,
+    discountPercentage: 17,
+    rating: 4.9,
+    reviewsCount: 45,
+    isBestSeller: true,
+    isFeatured: false,
+    category: 'Celebration Balloons',
+    categorySlug: 'balloons',
+    flowerTypes: ['Mini Roses', 'Helium Foil Balloons'],
+    occasions: ['Birthday', 'Celebration'],
+    cities: ['Lahore', 'Karachi', 'Islamabad', 'Rawalpindi', 'Faisalabad', 'Multan', 'All'],
+    images: ['/images/banners/hero-slide-3.webp'],
+    flowerDetails: {
+      stemCount: 10,
+      wrapperColor: 'Metallic Gold & Rose Velvet',
+      fragrance: 'Light Fresh Rose',
+      lifespan: 'Balloon Float: 48h | Flowers: 5 Days'
+    },
+    dimensions: 'H: 70cm x W: 35cm',
+    inStock: true
+  },
+  {
+    id: 'fb-teddy-1',
+    slug: 'cuddly-teddy-bear-rose-bundle',
+    name: 'Cuddly Teddy Bear & 18 Red Roses Bundle',
+    shortDescription: 'Plush 14-inch soft teddy bear holding a bouquet of 18 long-stem red roses.',
+    description: 'An irresistible expression of tenderness. A super-soft plush 14-inch brown teddy bear hugging a vibrant bouquet of 18 Grade-A red roses with baby\'s breath and imported tissue paper wrapping.',
+    price: 4999,
+    originalPrice: 6200,
+    discountPercentage: 19,
+    rating: 4.9,
+    reviewsCount: 78,
+    isBestSeller: true,
+    isFeatured: true,
+    category: 'Teddy Bears & Plushies',
+    categorySlug: 'teddy-and-plushies',
+    flowerTypes: ['Red Roses', 'Gypsophila', 'Soft Plush Teddy'],
+    occasions: ['Birthday', 'Romantic', 'Anniversary', 'Get Well Soon'],
+    cities: ['Lahore', 'Karachi', 'Islamabad', 'Rawalpindi', 'Faisalabad', 'Multan', 'Peshawar', 'Gujranwala', 'Sialkot', 'All'],
+    images: ['/images/products/chocolate_flower_hamper.webp'],
+    flowerDetails: {
+      stemCount: 18,
+      wrapperColor: 'Blush Pink & Gold Ribbon',
+      fragrance: 'Classic Sweet Rose',
+      lifespan: '5-7 Days'
+    },
+    dimensions: 'Teddy H: 35cm | Bouquet H: 50cm',
+    inStock: true
+  },
+  {
+    id: 'fb-candle-1',
+    slug: 'aromatherapy-lavender-candle-perfume-set',
+    name: 'Aromatherapy Soy Candle & Rose Perfume Gift Set',
+    shortDescription: 'Hand-poured French lavender soy candle paired with botanical rose fragrance and fresh lilies.',
+    description: 'Indulge their senses with tranquil aromas. Features a 220g natural soy wax aromatherapy candle scented with calming French lavender, a pocket luxury rose eau de parfum, and fresh white lilies arranged in a gift box.',
+    price: 4999,
+    originalPrice: 6500,
+    discountPercentage: 23,
+    rating: 4.8,
+    reviewsCount: 38,
+    isBestSeller: false,
+    isFeatured: false,
+    category: 'Scented Candles & Perfumes',
+    categorySlug: 'candles-and-perfumes',
+    flowerTypes: ['White Lilies', 'Soy Candle', 'Perfume'],
+    occasions: ['Birthday', 'Housewarming', 'Self Care', 'Anniversary'],
+    cities: ['Lahore', 'Karachi', 'Islamabad', 'Rawalpindi', 'Faisalabad', 'Multan', 'All'],
+    images: ['/images/products/white_roses_studio.webp'],
+    flowerDetails: {
+      stemCount: 6,
+      wrapperColor: 'Matte Charcoal Luxury Box',
+      fragrance: 'Lavender & White Floral',
+      lifespan: 'Candle Burn: 45h | Flowers: 7 Days'
+    },
+    dimensions: 'Box: 30cm x 25cm x 15cm',
+    inStock: true
+  },
+  {
+    id: 'fb-wedding-1',
+    slug: 'royal-nikkah-stage-floral-setup',
+    name: 'Royal Nikkah Stage Fresh Floral Backdrop Setup',
+    shortDescription: 'Complete on-site fresh flower floral stage backdrop, bridal couch styling, and fairy lights.',
+    description: 'Transform your special day into a fairy tale! Our master wedding florists provide comprehensive on-site floral stage design for Nikkah, Mehndi, Barat, and Walima. Includes imported white gladiolus, chrysanthemums, red rose cascades, and warm fairy lights. Available in Lahore, Karachi, and Islamabad.',
+    price: 35000,
+    originalPrice: 45000,
+    discountPercentage: 22,
+    rating: 5.0,
+    reviewsCount: 42,
+    isBestSeller: true,
+    isFeatured: true,
+    category: 'Wedding & Stage Decor',
+    categorySlug: 'wedding-decor',
+    flowerTypes: ['Red Roses', 'Gladiolus', 'Chrysanthemums', 'Green Ruscus'],
+    occasions: ['Wedding', 'Nikkah', 'Engagement'],
+    cities: ['Lahore', 'Karachi', 'Islamabad', 'Rawalpindi'],
+    images: ['/images/banners/hero-slide-1.webp'],
+    flowerDetails: {
+      stemCount: 500,
+      wrapperColor: 'Architectural Stage Arch',
+      fragrance: 'Grand Wedding Floral Fragrance',
+      lifespan: 'Setup completed 3 hours before event'
+    },
+    dimensions: 'Custom Stage Width: 12ft - 20ft',
+    inStock: true
+  },
+  {
+    id: 'fb-car-1',
+    slug: 'fresh-red-rose-wedding-car-decor',
+    name: 'Fresh Red Rose & Net Ribbon Wedding Car Decoration',
+    shortDescription: 'Exquisite hood floral arrangement, door handles bouquets, and matching bonnet ribbons.',
+    description: 'Give the bride and groom a regal arrival! Our professional decorators arrive at your doorstep or studio to decorate your car with fresh red roses, white baby\'s breath, and imported silk net draping. Safe magnetic and non-scratch suction attachments protect car paint.',
+    price: 12500,
+    originalPrice: 15000,
+    discountPercentage: 17,
+    rating: 4.9,
+    reviewsCount: 88,
+    isBestSeller: true,
+    isFeatured: true,
+    category: 'Wedding Car Decoration',
+    categorySlug: 'car-decoration',
+    flowerTypes: ['Red Roses', 'Gypsophila', 'Eucalyptus', 'Silk Net Drapes'],
+    occasions: ['Wedding', 'Barat'],
+    cities: ['Lahore', 'Karachi', 'Islamabad', 'Rawalpindi', 'Faisalabad', 'Multan', 'Sialkot'],
+    images: ['/images/products/red_roses_bouquet.webp'],
+    flowerDetails: {
+      stemCount: 150,
+      wrapperColor: 'White/Red Silk Net Ribbon',
+      fragrance: 'Fresh Bloom Scent',
+      lifespan: 'Lasts 24 hours under wedding conditions'
+    },
+    dimensions: 'Custom Fit for Sedan & SUV',
+    inStock: true
+  },
+  {
+    id: 'fb-room-1',
+    slug: 'traditional-bridal-masehri-bed-decor',
+    name: 'Traditional Bridal Suite Masehri & Petal Bed Decor',
+    shortDescription: 'Traditional rose and jasmine Masehri canopy with dense red rose petal bed styling and candles.',
+    description: 'Create an unforgettable wedding night bridal room ambiance. Our master designers drape a fragrant fresh flower Masehri canopy using Motia strings and crimson roses, paired with intricate floral heart patterns on the bridal bed and safe LED ambiance candles.',
+    price: 18000,
+    originalPrice: 22000,
+    discountPercentage: 18,
+    rating: 5.0,
+    reviewsCount: 56,
+    isBestSeller: true,
+    isFeatured: true,
+    category: 'Bridal Room & Masehri Decor',
+    categorySlug: 'room-decoration',
+    flowerTypes: ['Red Rose Petals', 'Motia Jasmine Garlands', 'Tuberoses'],
+    occasions: ['Wedding', 'Anniversary'],
+    cities: ['Lahore', 'Karachi', 'Islamabad', 'Rawalpindi', 'Faisalabad'],
+    images: ['/images/banners/hero-slide-2.webp'],
+    flowerDetails: {
+      stemCount: 300,
+      wrapperColor: 'Fresh Bloom Canopy',
+      fragrance: 'Captivating Jasmine & Rose Aroma',
+      lifespan: 'Arranged on-site 2 hours before arrival'
+    },
+    dimensions: 'Fits King & Queen Size Beds',
+    inStock: true
+  },
+  {
+    id: 'fb-party-1',
+    slug: 'grand-birthday-balloon-backdrop-decor',
+    name: 'Thematic Birthday Balloon Arch & Flower Backdrop Setup',
+    shortDescription: 'Organic balloon garland arch, customized neon sign, and fresh floral pedestals for birthdays.',
+    description: 'Celebrate birthdays and baby showers in high style! Includes a 10ft organic dual-color balloon garland arch, customizable LED neon sign (Happy Birthday / Oh Baby), cake table styling, and fresh floral side pedestals set up at your home or venue.',
+    price: 15000,
+    originalPrice: 19000,
+    discountPercentage: 21,
+    rating: 4.9,
+    reviewsCount: 39,
+    isBestSeller: true,
+    isFeatured: false,
+    category: 'Birthday & Event Decor',
+    categorySlug: 'party-event-decor',
+    flowerTypes: ['Seasonal Mixed Blooms', 'Biodegradable Latex Balloons'],
+    occasions: ['Birthday', 'Baby Shower', 'Celebration'],
+    cities: ['Lahore', 'Karachi', 'Islamabad', 'Rawalpindi', 'Faisalabad', 'Multan'],
+    images: ['/images/banners/hero-slide-3.webp'],
+    flowerDetails: {
+      stemCount: 60,
+      wrapperColor: 'Pastel / Gold Thematic Balloon Arch',
+      fragrance: 'Fresh & Cheerful',
+      lifespan: 'Maintains structure 24-48 hours'
+    },
+    dimensions: 'H: 7ft x W: 10ft',
     inStock: true
   }
 ];

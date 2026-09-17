@@ -27,7 +27,7 @@ export const FAQS: FAQItem[] = [
   },
   {
     question: 'Can I schedule midnight birthday flower delivery?',
-    answer: 'Yes, midnight delivery (11:30 PM - 12:15 AM) is available upon prior WhatsApp confirmation at 0320-0411680.'
+    answer: 'Yes, midnight delivery (11:30 PM - 12:15 AM) is available upon prior WhatsApp confirmation at 0348-0735344.'
   },
   {
     question: 'What local payment options are available in Pakistan?',

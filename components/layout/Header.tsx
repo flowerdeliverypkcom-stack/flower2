@@ -68,7 +68,7 @@ export default function Header() {
             </button>
 
             <Link href="/" className="group flex items-center flex-shrink-0">
-              <span className="font-serif text-lg xs:text-xl sm:text-2xl xl:text-3xl font-bold tracking-tight text-[#8B1538] group-hover:text-[#748B75] transition-colors leading-none">
+              <span className="font-serif text-lg xs:text-xl sm:text-2xl lg:text-[22px] xl:text-[24px] 2xl:text-3xl font-bold tracking-tight text-[#8B1538] group-hover:text-[#748B75] transition-colors leading-none">
                 FlowerDelivery<span className="text-[#748B75]">PK</span>
                 <span className="text-[#C5A880] text-sm sm:text-base font-serif">.com</span>
               </span>
@@ -76,7 +76,7 @@ export default function Header() {
           </div>
 
           {/* Center: Desktop Navigation Links (Visible on lg and up) */}
-          <nav className="hidden lg:flex items-center gap-1 xl:gap-2 text-[12px] xl:text-[13px] font-semibold text-[#8B1538] flex-shrink min-w-0">
+          <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1.5 2xl:gap-2 text-[12px] xl:text-[12.5px] 2xl:text-[13px] font-semibold text-[#8B1538] flex-shrink-0">
             {/* 1. Flowers Mega Dropdown */}
             <div
               className="relative py-1.5"
@@ -360,7 +360,7 @@ export default function Header() {
             {/* 7. Same Day Delivery Highlight Badge */}
             <Link
               href="/same-day-flower-delivery"
-              className="hidden xl:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#748B75]/10 hover:bg-[#748B75]/20 text-[#748B75] hover:text-[#8B1538] border border-[#748B75]/30 text-[11px] font-bold transition-colors whitespace-nowrap"
+              className="hidden 2xl:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#748B75]/10 hover:bg-[#748B75]/20 text-[#748B75] hover:text-[#8B1538] border border-[#748B75]/30 text-[11px] font-bold transition-colors whitespace-nowrap"
             >
               <span className="w-2 h-2 rounded-full bg-[#25D366] animate-pulse" />
               <span>Same Day</span>
@@ -368,25 +368,25 @@ export default function Header() {
           </nav>
 
           {/* Right: Actions Toolbar */}
-          <div className="flex items-center gap-1 sm:gap-1.5 xl:gap-2 flex-shrink-0">
+          <div className="flex items-center gap-0.5 sm:gap-1 xl:gap-1.5 flex-shrink-0">
             {/* Search Button */}
             <button
               onClick={() => setIsSearchOpen(true)}
-              className="p-2 rounded-full hover:bg-stone-100 text-[#8B1538] transition-colors flex items-center justify-center flex-shrink-0"
+              className="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full hover:bg-stone-100 text-[#8B1538] transition-colors flex-shrink-0"
               title="Search Catalog"
               aria-label="Search"
             >
-              <Search className="w-4 h-4 sm:w-5 sm:h-5" />
+              <Search className="w-4 h-4 sm:w-[18px] sm:h-[18px]" />
             </button>
 
             {/* Wishlist Button */}
             <Link
               href="/wishlist"
-              className="relative p-2 rounded-full hover:bg-stone-100 text-[#8B1538] transition-colors hidden sm:flex items-center justify-center flex-shrink-0"
+              className="relative w-8 h-8 sm:w-9 sm:h-9 hidden sm:flex items-center justify-center rounded-full hover:bg-stone-100 text-[#8B1538] transition-colors flex-shrink-0"
               title="Wishlist"
               aria-label="Wishlist"
             >
-              <Heart className="w-4 h-4 sm:w-5 sm:h-5" />
+              <Heart className="w-4 h-4 sm:w-[18px] sm:h-[18px]" />
               {wishlist.length > 0 && (
                 <span className="absolute top-0.5 right-0.5 w-4 h-4 bg-[#8B1538] text-white text-[10px] font-bold rounded-full flex items-center justify-center">
                   {wishlist.length}
@@ -397,11 +397,11 @@ export default function Header() {
             {/* Cart Icon */}
             <Link
               href="/cart"
-              className="relative p-2 rounded-full hover:bg-stone-100 text-[#8B1538] transition-colors flex items-center justify-center flex-shrink-0"
+              className="relative w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full hover:bg-stone-100 text-[#8B1538] transition-colors flex-shrink-0"
               title="Shopping Cart"
               aria-label="Cart"
             >
-              <ShoppingBag className="w-4 h-4 sm:w-5 sm:h-5" />
+              <ShoppingBag className="w-4 h-4 sm:w-[18px] sm:h-[18px]" />
               {totalItemsCount > 0 && (
                 <span className="absolute top-0.5 right-0.5 w-4 h-4 bg-[#8B1538] text-white text-[10px] font-bold rounded-full flex items-center justify-center shadow-md animate-bounce">
                   {totalItemsCount}
@@ -414,11 +414,11 @@ export default function Header() {
               href={INSTAGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-full hover:bg-pink-50 text-[#8B1538] hover:text-pink-600 transition-colors hidden md:flex items-center justify-center flex-shrink-0"
+              className="w-8 h-8 sm:w-9 sm:h-9 hidden md:flex items-center justify-center rounded-full hover:bg-pink-50 text-[#8B1538] hover:text-pink-600 transition-colors flex-shrink-0"
               title={`Follow @${INSTAGRAM_HANDLE} on Instagram`}
               aria-label="Instagram"
             >
-              <Instagram className="w-4 h-4 sm:w-5 sm:h-5" />
+              <Instagram className="w-4 h-4 sm:w-[18px] sm:h-[18px]" />
             </a>
 
             {/* Compact WhatsApp Order CTA */}
@@ -426,12 +426,12 @@ export default function Header() {
               href={WHATSAPP_BASE_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-1.5 py-1.5 px-3 sm:px-3.5 rounded-full bg-[#25D366] hover:bg-[#1faa53] text-white text-xs font-bold transition-all shadow-sm hover:shadow-md flex-shrink-0 whitespace-nowrap"
+              className="inline-flex items-center justify-center gap-1.5 py-1.5 px-3 sm:px-3.5 rounded-full bg-[#25D366] hover:bg-[#1faa53] text-white text-xs font-bold transition-all shadow-sm hover:shadow-md flex-shrink-0 whitespace-nowrap ml-0.5 sm:ml-1"
               title={`WhatsApp: ${WHATSAPP_NUMBER}`}
             >
               <MessageCircle className="w-3.5 h-3.5 fill-white flex-shrink-0" />
               <span className="hidden sm:inline">WhatsApp</span>
-              <span className="hidden xl:inline">Order</span>
+              <span className="hidden 2xl:inline">Order</span>
             </a>
           </div>
         </div>

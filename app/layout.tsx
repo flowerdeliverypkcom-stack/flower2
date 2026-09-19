@@ -2,14 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Playfair_Display, Inter } from 'next/font/google';
 import './globals.css';
 import { CartProvider } from '@/context/CartContext';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
-import FloatingWhatsApp from '@/components/layout/FloatingWhatsApp';
-import SearchModal from '@/components/ui/SearchModal';
-import QuickViewModal from '@/components/ui/QuickViewModal';
-import ToastContainer from '@/components/ui/ToastContainer';
-import SalesNotificationPopup from '@/components/ui/SalesNotificationPopup';
-import PetalCanvas from '@/components/3d/PetalCanvas';
+import SiteLayout from '@/components/layout/SiteLayout';
 import { getOrganizationSchema, getLocalBusinessSchema } from '@/utils/schema';
 
 const playfair = Playfair_Display({
@@ -114,22 +107,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased min-h-screen flex flex-col bg-[#FAF7F2] text-[#222222] selection:bg-[#581825] selection:text-white">
         <CartProvider>
-          {/* Subtle Ambient 3D Petal Background */}
-          <PetalCanvas />
-
-          <Header />
-          
-          <main className="flex-grow">
-            {children}
-          </main>
-
-          <Footer />
-
-          <FloatingWhatsApp />
-          <SearchModal />
-          <QuickViewModal />
-          <ToastContainer />
-          <SalesNotificationPopup />
+          <SiteLayout>{children}</SiteLayout>
         </CartProvider>
       </body>
     </html>

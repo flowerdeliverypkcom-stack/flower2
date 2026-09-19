@@ -82,19 +82,95 @@ function extractFlowerTypes(tags, title) {
   return found.length ? found : ['Mix Flowers'];
 }
 
-export async function runImport({ dryRun = false, limit = 10, page = 1, fetchAll = false } = {}) {
+async function processProduct(p, client, existingIds, dryRun) {
+  const docId = `product-${p.id}`;
+  if (existingIds.has(docId)) {
+    return { status: 'skipped', title: p.title };
+  }
+
+  const categoryGroup = determineCategory(p);
+  const categoryId = `cat-${categoryGroup}`;
+  const cleanDesc = cleanHtml(p.body_html);
+  const shortDesc = cleanDesc.slice(0, 160).replace(/\n/g, ' ').trim();
+  const price = parseFloat(p.variants[0]?.price) || 0;
+  const originalPrice = p.variants[0]?.compare_at_price ? parseFloat(p.variants[0].compare_at_price) : undefined;
+  const imageUrl = p.images[0]?.src;
+  const occasions = extractOccasions(p.tags || []);
+  const flowerTypes = extractFlowerTypes(p.tags || [], p.title);
+  const isBestSeller = (p.tags || []).some(t => t.toLowerCase().includes('best selling') || t.toLowerCase().includes('premium'));
+
+  if (dryRun) {
+    return { status: 'imported', title: p.title };
+  }
+
+  try {
+    let imageAssetRef = null;
+    if (imageUrl) {
+      const imgRes = await fetch(imageUrl);
+      if (imgRes.ok) {
+        const imgBuffer = Buffer.from(await imgRes.arrayBuffer());
+        const asset = await client.assets.upload('image', imgBuffer, {
+          filename: `${p.handle || p.id}.jpg`,
+        });
+        imageAssetRef = asset._id;
+      }
+    }
+
+    const doc = {
+      _id: docId,
+      _type: 'product',
+      name: p.title,
+      slug: { _type: 'slug', current: p.handle || `product-${p.id}` },
+      price: price,
+      originalPrice: originalPrice,
+      shortDescription: shortDesc,
+      description: cleanDesc,
+      category: {
+        _type: 'reference',
+        _ref: categoryId,
+      },
+      flowerTypes: flowerTypes,
+      occasions: occasions,
+      cities: ['Lahore', 'Karachi', 'Islamabad', 'Rawalpindi', 'Faisalabad', 'All'],
+      inStock: p.variants.some(v => v.available),
+      isBestSeller: isBestSeller,
+      isFeatured: false,
+      seo: {
+        metaTitle: `${p.title} | FlowerDeliveryPK`,
+        metaDescription: shortDesc,
+      },
+    };
+
+    if (imageAssetRef) {
+      doc.images = [
+        {
+          _type: 'image',
+          _key: `img-${p.id}`,
+          asset: {
+            _type: 'reference',
+            _ref: imageAssetRef,
+          },
+        },
+      ];
+    }
+
+    await client.createOrReplace(doc);
+    existingIds.add(docId);
+    return { status: 'imported', title: p.title };
+  } catch (err) {
+    return { status: 'failed', title: p.title, error: err.message };
+  }
+}
+
+export async function runImport({ dryRun = false, limit = 250, startPage = 1, fetchAll = true, concurrency = 4 } = {}) {
   console.log(`\n======================================================`);
   console.log(`🌺 FlowerBouquet.pk -> Sanity Importer`);
   console.log(`Project: ${PROJECT_ID} | Dataset: ${DATASET}`);
-  console.log(`DryRun: ${dryRun} | Limit per page: ${limit} | FetchAll: ${fetchAll}`);
+  console.log(`Concurrency: ${concurrency} workers | Limit per page: ${limit}`);
   console.log(`======================================================\n`);
 
   if (!dryRun && !TOKEN) {
     console.error('\n❌ [SANITY_API_TOKEN MISSING]');
-    console.error('Sanity database mein likhne aur images upload karne ke liye Token zaroori hai.');
-    console.error('1. Link open karein: https://sanity.io/manage/personal/project/' + PROJECT_ID + '/api');
-    console.error('2. "Add API token" par click karein -> Role "Editor" select karein.');
-    console.error('3. Token copy karke .env.local mein SANITY_API_TOKEN="sk..." add karein ya chat mein send karein.\n');
     process.exit(1);
   }
 
@@ -106,9 +182,9 @@ export async function runImport({ dryRun = false, limit = 10, page = 1, fetchAll
     useCdn: false,
   });
 
-  // Step 1: Base categories
+  const existingIds = new Set();
   if (!dryRun) {
-    console.log('📦 Checking base categories in Sanity...');
+    console.log('📦 Checking base categories and existing products in Sanity...');
     const categories = [
       { _id: 'cat-flowers', _type: 'category', name: 'Flowers', slug: { _type: 'slug', current: 'flowers' }, group: 'flowers' },
       { _id: 'cat-cakes', _type: 'category', name: 'Cakes', slug: { _type: 'slug', current: 'cakes' }, group: 'cakes' },
@@ -117,129 +193,88 @@ export async function runImport({ dryRun = false, limit = 10, page = 1, fetchAll
     for (const cat of categories) {
       await client.createOrReplace(cat);
     }
-    console.log('✅ Categories ready in Sanity.\n');
+    
+    // Fetch already uploaded product IDs to prevent redundant work
+    const existing = await client.fetch('*[_type == "product"]._id');
+    for (const id of existing) {
+      existingIds.add(id);
+    }
+    console.log(`✅ Sanity connected. Found ${existingIds.size} already existing products.`);
   }
 
-  let currentPage = page;
+  let currentPage = startPage;
   let totalImported = 0;
+  let totalSkipped = 0;
+  let totalFailed = 0;
   let hasMore = true;
 
   while (hasMore) {
     const url = `https://flowerbouquet.pk/products.json?limit=${limit}&page=${currentPage}`;
-    console.log(`📥 Fetching page ${currentPage}: ${url}`);
-    const res = await fetch(url);
-    if (!res.ok) {
-      console.error(`Failed to fetch: HTTP ${res.status}`);
+    console.log(`\n📥 Fetching page ${currentPage}...`);
+    let products = [];
+    try {
+      const res = await fetch(url);
+      if (!res.ok) {
+        console.error(`Failed to fetch page ${currentPage}: HTTP ${res.status}`);
+        break;
+      }
+      const data = await res.json();
+      products = data.products || [];
+    } catch (e) {
+      console.error(`Network error on page ${currentPage}:`, e.message);
       break;
     }
 
-    const data = await res.json();
-    const products = data.products || [];
     if (products.length === 0) {
-      console.log('No more products found on page ' + currentPage);
+      console.log(`No more products found on page ${currentPage}. Import complete!`);
       break;
     }
 
-    console.log(`Processing ${products.length} products on page ${currentPage}...`);
+    console.log(`⚡ Processing ${products.length} products with ${concurrency} concurrent workers...`);
 
-    for (let i = 0; i < products.length; i++) {
-      const p = products[i];
-      const categoryGroup = determineCategory(p);
-      const categoryId = `cat-${categoryGroup}`;
-      const cleanDesc = cleanHtml(p.body_html);
-      const shortDesc = cleanDesc.slice(0, 160).replace(/\n/g, ' ').trim();
-      const price = parseFloat(p.variants[0]?.price) || 0;
-      const originalPrice = p.variants[0]?.compare_at_price ? parseFloat(p.variants[0].compare_at_price) : undefined;
-      const imageUrl = p.images[0]?.src;
-      const occasions = extractOccasions(p.tags || []);
-      const flowerTypes = extractFlowerTypes(p.tags || [], p.title);
-      const isBestSeller = (p.tags || []).some(t => t.toLowerCase().includes('best selling') || t.toLowerCase().includes('premium'));
+    // Process in batches of size `concurrency`
+    for (let i = 0; i < products.length; i += concurrency) {
+      const batch = products.slice(i, i + concurrency);
+      const results = await Promise.all(
+        batch.map(p => processProduct(p, client, existingIds, dryRun))
+      );
 
-      console.log(` [${totalImported + 1}] ${p.title}`);
-      console.log(`     Price: PKR ${price} | Cat: ${categoryGroup} | Occasions: ${occasions.join(', ')}`);
-
-      if (dryRun) {
-        totalImported++;
-        continue;
+      for (const res of results) {
+        if (res.status === 'imported') {
+          totalImported++;
+          console.log(`  [+] Imported: ${res.title}`);
+        } else if (res.status === 'skipped') {
+          totalSkipped++;
+          console.log(`  [~] Already exists (skipped): ${res.title}`);
+        } else {
+          totalFailed++;
+          console.log(`  [!] Failed: ${res.title} - ${res.error}`);
+        }
       }
 
-      try {
-        let imageAssetRef = null;
-        if (imageUrl) {
-          const imgRes = await fetch(imageUrl);
-          if (imgRes.ok) {
-            const imgBuffer = Buffer.from(await imgRes.arrayBuffer());
-            const asset = await client.assets.upload('image', imgBuffer, {
-              filename: `${p.handle || p.id}.jpg`,
-            });
-            imageAssetRef = asset._id;
-          }
-        }
-
-        const doc = {
-          _id: `product-${p.id}`,
-          _type: 'product',
-          name: p.title,
-          slug: { _type: 'slug', current: p.handle || `product-${p.id}` },
-          price: price,
-          originalPrice: originalPrice,
-          shortDescription: shortDesc,
-          description: cleanDesc,
-          category: {
-            _type: 'reference',
-            _ref: categoryId,
-          },
-          flowerTypes: flowerTypes,
-          occasions: occasions,
-          cities: ['Lahore', 'Karachi', 'Islamabad', 'Rawalpindi', 'Faisalabad', 'All'],
-          inStock: p.variants.some(v => v.available),
-          isBestSeller: isBestSeller,
-          isFeatured: false,
-          seo: {
-            metaTitle: `${p.title} | FlowerDeliveryPK`,
-            metaDescription: shortDesc,
-          },
-        };
-
-        if (imageAssetRef) {
-          doc.images = [
-            {
-              _type: 'image',
-              _key: `img-${p.id}`,
-              asset: {
-                _type: 'reference',
-                _ref: imageAssetRef,
-              },
-            },
-          ];
-        }
-
-        await client.createOrReplace(doc);
-        console.log(`     ✨ Imported to Sanity: product-${p.id}`);
-        totalImported++;
-      } catch (err) {
-        console.error(`     ⚠️ Failed to import:`, err.message);
-      }
+      console.log(`  📊 Progress: ${totalImported} new imported, ${totalSkipped} skipped, ${totalFailed} failed`);
     }
 
     if (!fetchAll) {
       hasMore = false;
     } else {
       currentPage++;
-      // Polite rate-limiting between page requests
       await new Promise(r => setTimeout(r, 1000));
     }
   }
 
-  console.log(`\n🎉 Completed! Total products processed: ${totalImported}\n`);
+  console.log(`\n🎉 DONE! All pages processed.`);
+  console.log(`Summary: ${totalImported} imported, ${totalSkipped} already existed, ${totalFailed} failed.\n`);
 }
 
 const args = process.argv.slice(2);
 const isDry = args.includes('--dry-run');
-const fetchAll = args.includes('--all');
 const limitArg = args.find(a => a.startsWith('--limit='));
 const pageArg = args.find(a => a.startsWith('--page='));
+const concArg = args.find(a => a.startsWith('--concurrency='));
 const limit = limitArg ? parseInt(limitArg.split('=')[1], 10) : 250;
 const page = pageArg ? parseInt(pageArg.split('=')[1], 10) : 1;
+const concurrency = concArg ? parseInt(concArg.split('=')[1], 10) : 4;
+const fetchAll = !args.includes('--single-page');
 
-runImport({ dryRun: isDry, limit, page, fetchAll }).catch(console.error);
+runImport({ dryRun: isDry, limit, startPage: page, fetchAll, concurrency }).catch(console.error);

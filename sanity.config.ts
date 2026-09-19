@@ -8,7 +8,7 @@ export const sanityConfig = defineConfig({
   basePath: '/studio',
   name: 'default',
   title: 'FlowerDeliveryPK Studio',
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'flowerdeliverypk',
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'am64tc6i',
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
   plugins: [structureTool()],
   schema: {

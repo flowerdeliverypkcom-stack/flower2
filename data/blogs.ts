@@ -945,5 +945,323 @@ export const BLOG_POSTS: BlogPost[] = [
         answer: 'Usually dehydration or blocked stems. Re-trim at an angle, change the water, and try the full-submersion rescue trick — most roses recover within an hour.'
       }
     ]
-  }
+  },
+  {
+    id: 'blog-16',
+    slug: 'nikkah-stage-decoration-pakistan-ideas-costs',
+    title: 'Nikkah Stage Decoration in Pakistan: 2026 Ideas, Flower Choices & Costs',
+    metaDescription: 'Complete guide to nikkah stage decoration in Pakistan — fresh flower backdrop ideas, best blooms for nikkah, drapes + floral combos, costs from PKR 14,999 & booking tips for Lahore, Karachi & Islamabad.',
+    category: 'Wedding Flowers',
+    publishedDate: 'October 5, 2026',
+    author: 'FlowerDeliveryPK Editorial Team',
+    readTime: '8 min read',
+    featuredImage: '/images/products/white_roses_studio.webp',
+    tags: [
+      'Nikkah Stage Decoration',
+      'Nikkah Decor Pakistan',
+      'Wedding Flower Decoration',
+      'Shaadi Season 2026',
+      'Floral Backdrop Ideas'
+    ],
+    relatedProductSlugs: [
+      'royal-nikkah-stage-floral-setup',
+      'bridal-handheld-white-rose-bouquet',
+      'fresh-jasmine-bridal-gajray-set'
+    ],
+    content: `
+      <h2>Why the Nikkah Stage Deserves the Best Flowers in the House</h2>
+      <p>The nikkah is the heart of a Pakistani wedding — intimate, emotional, and photographed more than any other moment of the shaadi. Whether it happens in a drawing room in DHA Lahore, a farmhouse in Karachi, or a marquee in Islamabad, the floral backdrop behind the couple becomes the background of every family portrait for decades. A thoughtfully designed nikkah stage does not need to be extravagant; it needs to be fresh, fragrant, and personal.</p>
+
+      <p>At FlowerDeliveryPK.com, we design nikkah stage decoration across Pakistan with farm-fresh flowers arranged the morning of your event. This guide covers the styles, flower choices, and real costs for 2026.</p>
+
+      <h3>1. The Three Nikkah Stage Styles That Work in 2026</h3>
+      <p><strong>Classic floral wall:</strong> A dense wall of fresh roses, carnations and baby's breath behind the couple's sofa. Timeless, photographs beautifully, and works in halls and homes alike. Our <strong>Royal Nikkah Stage Floral Setup</strong> is built exactly this way — full fresh-flower backdrop with coordinated sofa florals.</p>
+
+      <p><strong>Drapes + floral accents:</strong> Flowing fabric in ivory, blush or champagne with clustered floral installations at the top corners and base. Lighter, airier, and ideal for daytime nikkah ceremonies where a full flower wall would feel heavy. Fresh jasmine strings (motia) woven through the drapes add fragrance and tradition.</p>
+
+      <p><strong>Minimal arch:</strong> A single round or asymmetrical floral arch framing the couple — perfect for intimate home nikkahs with 20–50 guests. Elegant in photos, kind to the budget, and quick to install.</p>
+
+      <h3>2. Best Flowers for a Nikkah Stage (and Why)</h3>
+      <ul>
+        <li><strong>Red and pink roses:</strong> The shaadi classic — lush, romantic, and available in every shade from deep maroon to pastel blush.</li>
+        <li><strong>White roses and lilies:</strong> For the serene, elegant nikkah look, especially popular for daytime ceremonies.</li>
+        <li><strong>Carnations:</strong> Full, long-lasting, and excellent value — they hold up beautifully in December–February wedding halls.</li>
+        <li><strong>Baby's breath (gypsophila):</strong> The perfect filler that makes every arrangement look twice as full.</li>
+        <li><strong>Fresh jasmine (motia) strings:</strong> Woven into drapes or hung as curtains, they bring the unmistakable fragrance of a Pakistani shaadi.</li>
+        <li><strong>Marigolds:</strong> For mehndi-adjacent nikkah functions, vibrant yellows and oranges in garland strings.</li>
+      </ul>
+      <p>We never use artificial flowers on wedding stages. Real blooms photograph better, smell better, and signal care — guests notice the difference immediately.</p>
+
+      <h3>3. What Nikkah Decoration Costs in Pakistan (2026 Guide)</h3>
+      <ul>
+        <li><strong>Intimate home nikkah setup:</strong> from PKR 14,999 — floral arch or backdrop corner, sofa florals, entry touches.</li>
+        <li><strong>Hall nikkah stage (floral wall or drapes + florals):</strong> from PKR 34,999 — full stage backdrop, stage skirting, sofa and side florals.</li>
+        <li><strong>Grand nikkah + entry styling:</strong> custom quote — stage, entry arch, aisle florals and photo corner for 200+ guests.</li>
+      </ul>
+      <p>Final pricing depends on your city, venue size, and flower selection. WhatsApp us your event date and a reference photo at <strong>0348-0735344</strong> for an exact quote within 30 minutes.</p>
+
+      <h3>4. Booking Timeline: When to Reserve Your Date</h3>
+      <p>December–February dates fill fast — book <strong>3–4 weeks ahead</strong> for weekend nikkahs in peak season. Off-peak or weekday nikkahs can be arranged with 48 hours' notice in Lahore, Karachi, and Islamabad, subject to team availability. Car decor and bridal bouquets for the same event can be bundled into one booking.</p>
+
+      <h3>5. How Our Nikkah Setup Works on the Day</h3>
+      <p>Our floral styling team arrives at your venue or home with all fresh flowers, frames, drapes, and tools. Stems are cut and arranged the same morning, transported in chilled vans, and finished on-site. Before the event, we send you a <strong>live HD WhatsApp video</strong> of your exact stage — what you approved is what your guests see.</p>
+
+      <p>Planning your nikkah? See our full <a href="/wedding-decor">wedding flower decoration</a> services — nikkah, mehndi, baraat and walima styling across Pakistan — or explore <a href="/flower-delivery-lahore">flower delivery in Lahore</a>, <a href="/flower-delivery-karachi">Karachi</a> and <a href="/flower-delivery-islamabad">Islamabad</a>.</p>
+    `,
+    faqs: [
+      {
+        question: 'How far in advance should I book nikkah stage decoration?',
+        answer: 'Book 3–4 weeks ahead for December–February weekend dates, which fill fastest. Weekday or off-peak nikkahs can be arranged with 48 hours notice in Lahore, Karachi and Islamabad.'
+      },
+      {
+        question: 'Do you decorate nikkah stages at home or only at venues?',
+        answer: 'Both. Our styling team comes to homes, farmhouses, marquees and hotels with all fresh flowers and equipment — most of our nikkah setups are actually home ceremonies.'
+      },
+      {
+        question: 'Can the flowers match our nikkah theme colors?',
+        answer: 'Yes. Share your outfit or decor theme on WhatsApp and we build the palette — classic red-gold, all-white elegance, pastel pinks, or vibrant mehndi brights.'
+      },
+      {
+        question: 'What is the starting price for nikkah decoration in Pakistan?',
+        answer: 'Intimate home nikkah setups start from PKR 14,999; full hall stages with floral walls start from PKR 34,999. Message us your date and venue for an exact quote in 30 minutes.'
+      }
+    ]
+  },
+  {
+    id: 'blog-17',
+    slug: 'bridal-bouquet-pakistan-guide-roses-prices',
+    title: 'Bridal Bouquet in Pakistan: How to Choose (Roses vs Peonies, Prices)',
+    metaDescription: 'How to choose the perfect bridal bouquet in Pakistan — hand-tied vs cascade styles, best flowers for Pakistani brides, matching your outfit, prices PKR 3,499–9,999 & care tips.',
+    category: 'Wedding Flowers',
+    publishedDate: 'October 5, 2026',
+    author: 'FlowerDeliveryPK Editorial Team',
+    readTime: '7 min read',
+    featuredImage: '/images/products/pink_roses_studio.webp',
+    tags: [
+      'Bridal Bouquet Pakistan',
+      'Shaadi Flowers',
+      'Bridal Bouquet Prices',
+      'Wedding Bouquet Ideas',
+      'Fresh Flower Bouquet'
+    ],
+    relatedProductSlugs: [
+      'bridal-handheld-white-rose-bouquet',
+      'fresh-jasmine-bridal-gajray-set',
+      'classic-24-red-rose-bouquet'
+    ],
+    content: `
+      <h2>The Bouquet Every Camera Will Find</h2>
+      <p>Long after the walima lights dim, your bridal bouquet lives on in every photograph — the rukhsati close-ups, the couple portraits, the family group shots. Choosing it deserves more thought than a last-minute add-on. This guide walks Pakistani brides through styles, flower choices, outfit matching, and real 2026 prices.</p>
+
+      <h3>1. Bouquet Shapes: Which Suits You?</h3>
+      <p><strong>Hand-tied posy:</strong> The most popular choice in Pakistan — a compact, rounded bouquet of roses or mixed blooms wrapped in ribbon. Comfortable to hold through long photo sessions and suits lehengas, shararas and gowns alike. Our <strong>Bridal Handheld White Rose Bouquet</strong> is the classic example.</p>
+
+      <p><strong>Cascade:</strong> Flowers trail downward in a waterfall effect. Dramatic and regal — best with heavier bridal outfits and taller brides.</p>
+
+      <p><strong>Wild/garden style:</strong> Looser, organic arrangements with mixed textures — baby's breath, eucalyptus, seasonal blooms. Perfect for daytime nikkah or outdoor mehndi events.</p>
+
+      <h3>2. Roses vs Peonies vs Lilies: The Honest Comparison</h3>
+      <ul>
+        <li><strong>Roses:</strong> Available year-round in Pakistan in every color, sturdy through long events, and the most budget-friendly premium option. Red for baraat, white or pastel for nikkah.</li>
+        <li><strong>Peonies:</strong> Luxuriously full and fragrant — but seasonal and significantly pricier in Pakistan, and they wilt faster in warm halls. Book only in cooler months with a trusted florist.</li>
+        <li><strong>Lilies and orchids:</strong> Elegant and long-lasting; white lilies are a favorite for nikkah bouquets. Note their strong fragrance — lovely in photos, overwhelming in a closed car.</li>
+        <li><strong>Carnations:</strong> Underrated — full heads, excellent longevity, and kind to the budget for larger bouquets.</li>
+      </ul>
+      <p>Our recommendation for most Pakistani brides: premium roses as the base, accented with baby's breath and seasonal fillers. Beautiful, reliable, and available on your exact date.</p>
+
+      <h3>3. Matching Your Bouquet to Your Outfit</h3>
+      <ul>
+        <li><strong>Red/maroon bridal:</strong> White, ivory or blush-pink bouquet for contrast — the classic baraat combination.</li>
+        <li><strong>Pastel bridal (mint, peach, powder pink):</strong> Deeper-toned bouquet — red roses or mixed jewel tones — so the bouquet stands out against the outfit.</li>
+        <li><strong>Ivory/gold bridal:</strong> Almost anything works; blush roses with greenery are the 2026 favorite.</li>
+        <li><strong>Mehndi yellow/green:</strong> Vibrant orange-pink mixes with marigold accents.</li>
+      </ul>
+      <p>Send us a photo of your outfit on WhatsApp (<strong>0348-0735344</strong>) and our florists will suggest the exact palette — this is a free service with every bridal bouquet order.</p>
+
+      <h3>4. Bridal Bouquet Prices in Pakistan (2026)</h3>
+      <ul>
+        <li><strong>Classic hand-tied rose bouquet:</strong> PKR 3,499 – 5,999</li>
+        <li><strong>Premium mixed bouquet (roses + lilies/orchids):</strong> PKR 6,999 – 9,999</li>
+        <li><strong>Fresh jasmine gajray set (wrists + hair):</strong> pairs beautifully with any bouquet — see our <strong>Fresh Jasmine Bridal Gajray Set</strong></li>
+      </ul>
+
+      <h3>5. Keeping Your Bouquet Fresh Through the Event</h3>
+      <p>Our bouquets are assembled the morning of your event and travel in chilled vans. Keep the bouquet in its water wrap until photos begin, avoid placing it near heaters or in direct sun during outdoor shoots, and ask your coordinator for a vase of water between functions. Roses handled this way stay pristine for 8–10 hours easily.</p>
+
+      <p>Ordering from abroad for a family wedding? We deliver bridal bouquets across <a href="/flower-delivery-lahore">Lahore</a>, <a href="/flower-delivery-karachi">Karachi</a> and <a href="/flower-delivery-islamabad">Islamabad</a> with live WhatsApp video confirmation before dispatch. See all our <a href="/wedding-decor">wedding flower decoration</a> services.</p>
+    `,
+    faqs: [
+      {
+        question: 'How much does a bridal bouquet cost in Pakistan?',
+        answer: 'Classic hand-tied rose bouquets cost PKR 3,499–5,999; premium mixed bouquets with lilies or orchids run PKR 6,999–9,999. Share your outfit photo on WhatsApp for an exact quote.'
+      },
+      {
+        question: 'How early should I order my bridal bouquet?',
+        answer: 'Order 3–5 days ahead so we can reserve premium blooms. During December–February peak season, book a week ahead. Bundling with your nikkah or walima decor booking guarantees availability.'
+      },
+      {
+        question: 'Can I get fresh gajray with my bridal bouquet?',
+        answer: 'Yes — our Fresh Jasmine Bridal Gajray Set (wrists + hair) is designed to pair with bridal bouquets and is made fresh on the morning of your event.'
+      },
+      {
+        question: 'Do you deliver bridal bouquets on the wedding day morning?',
+        answer: 'Yes. Bouquets are assembled the same morning and delivered in chilled vans 2–3 hours before your event, anywhere in Lahore, Karachi, Islamabad and Rawalpindi.'
+      }
+    ]
+  },
+  {
+    id: 'blog-18',
+    slug: 'mehndi-decor-fresh-flowers-pakistani-weddings',
+    title: 'Mehndi Decor with Fresh Flowers: 12 Ideas for Pakistani Weddings',
+    metaDescription: '12 fresh-flower mehndi decor ideas for Pakistani weddings 2026 — marigold strings, jhoola swings, photo booth florals, entry arches, color palettes & budget tips for Lahore, Karachi & Islamabad.',
+    category: 'Wedding Flowers',
+    publishedDate: 'October 5, 2026',
+    author: 'FlowerDeliveryPK Editorial Team',
+    readTime: '8 min read',
+    featuredImage: '/images/products/sunflower_roses.webp',
+    tags: [
+      'Mehndi Decor Pakistan',
+      'Mehndi Flower Decoration',
+      'Shaadi Decor Ideas',
+      'Marigold Decor',
+      'Wedding Decor Lahore'
+    ],
+    relatedProductSlugs: [
+      'royal-nikkah-stage-floral-setup',
+      'fresh-jasmine-bridal-gajray-set',
+      'jumbo-sunflower-bouquet'
+    ],
+    content: `
+      <h2>Mehndi: The Most Colorful Canvas of the Shaadi</h2>
+      <p>If the baraat is elegance and the walima is grandeur, the mehndi is pure joy — and nothing carries that joy like fresh flowers in full color. Marigold yellows, rose pinks, jasmine whites: a mehndi done right smells as good as it looks. Here are 12 fresh-flower ideas our styling team uses across Pakistan, plus the budgets and palettes that make them work.</p>
+
+      <h3>Color & Form Ideas</h3>
+      <p><strong>1. Marigold curtain backdrops:</strong> Strings of fresh marigolds hung as a full curtain behind the stage — the single most photogenic mehndi backdrop there is, in yellows, oranges and deep reds.</p>
+
+      <p><strong>2. The floral jhoola (swing):</strong> A swing wrapped in fresh florals and drapes for the bride's entrance photos. Use sturdy blooms — marigolds and carnations hold up best on a structure people sit on.</p>
+
+      <p><strong>3. Photo booth flower wall:</strong> A dense mixed-flower wall in mehndi brights as the selfie station. Guests will use it all night — budget for hardy flowers here.</p>
+
+      <p><strong>4. Entry arch in brights:</strong> A full floral entry arch in yellow-orange-pink announces the mehndi before guests even enter the hall.</p>
+
+      <p><strong>5. Hanging floral chandeliers:</strong> Suspended rings of marigolds and jasmine above the dance floor or stage — dramatic in evening light.</p>
+
+      <p><strong>6. Table centerpieces, low and lush:</strong> Low bowls of marigolds and roses so guests can actually see each other across the table — tall arrangements kill mehndi conversation.</p>
+
+      <h3>Detail Ideas That Guests Remember</h3>
+      <p><strong>7. Jasmine wrist corsages for guests:</strong> Fresh motia gajray for the bride's friends and sisters — our <strong>Fresh Jasmine Bridal Gajray Set</strong> extends to guest sets on request.</p>
+
+      <p><strong>8. Floral rangoli at the entrance:</strong> A fresh-petal rangoli in marigold and rose petals — traditional, fragrant, unforgettable.</p>
+
+      <p><strong>9. Dhol and decor coordination:</strong> Wrap the dhol players' area in matching florals so performance photos carry your palette.</p>
+
+      <p><strong>10. Car-to-venue flower trail:</strong> Petal pathways from the entrance to the stage in your theme colors.</p>
+
+      <p><strong>11. Mehndi plate florals:</strong> The bride's mehndi cones presented on a fresh-flower bed — small detail, big photographs.</p>
+
+      <p><strong>12. Farewell flower shower:</strong> Fresh petals for the rukhsati-style mehndi send-off moment.</p>
+
+      <h3>Palettes That Work</h3>
+      <ul>
+        <li><strong>Classic mehndi:</strong> yellow marigold + orange marigold + hot pink roses</li>
+        <li><strong>Pastel mehndi (2026 trend):</strong> peach roses + pink carnations + white jasmine + mint drapes</li>
+        <li><strong>Royal mehndi:</strong> deep red roses + gold marigolds + ivory drapes</li>
+      </ul>
+
+      <h3>Budget Tips</h3>
+      <p>Mehndi floral styling starts from <strong>PKR 24,999</strong> for an intimate home function. Marigolds give the most visual impact per rupee of any wedding flower — a marigold-heavy design looks twice as full as a rose-heavy one at the same budget. Book 2–3 weeks ahead in season; our team serves <a href="/flower-delivery-lahore">Lahore</a>, <a href="/flower-delivery-karachi">Karachi</a>, <a href="/flower-delivery-islamabad">Islamabad</a> and Rawalpindi. See the full range on our <a href="/wedding-decor">wedding flower decoration</a> page, or WhatsApp <strong>0348-0735344</strong> with your date for a quote in 30 minutes.</p>
+    `,
+    faqs: [
+      {
+        question: 'What flowers are best for mehndi decoration?',
+        answer: 'Marigolds (best value and brightest color), roses, carnations and fresh jasmine. Marigolds give the most visual impact per rupee and hold up well through long mehndi nights.'
+      },
+      {
+        question: 'How much does mehndi flower decoration cost in Pakistan?',
+        answer: 'Intimate home mehndi styling starts from PKR 24,999; hall stages with marigold curtains, jhoola and photo booth run higher depending on venue size. WhatsApp your date and venue for an exact quote.'
+      },
+      {
+        question: 'Can you do mehndi decor at home?',
+        answer: 'Yes — most of our mehndi setups are home functions. The team brings all flowers, frames, drapes and tools, and finishes everything on-site the same day.'
+      }
+    ]
+  },
+  {
+    id: 'blog-19',
+    slug: 'wedding-car-decoration-flowers-prices-pakistan',
+    title: 'Wedding Car Decoration with Flowers: Prices & Booking in Lahore, Karachi, Islamabad',
+    metaDescription: 'Wedding car flower decoration guide Pakistan 2026 — bonnet vs full-car styles, fresh vs artificial flowers, real prices PKR 4,999–12,999, how early to book & same-day options.',
+    category: 'Wedding Flowers',
+    publishedDate: 'October 5, 2026',
+    author: 'FlowerDeliveryPK Editorial Team',
+    readTime: '6 min read',
+    featuredImage: '/images/products/red_roses_bouquet.webp',
+    tags: [
+      'Wedding Car Decoration Pakistan',
+      'Car Decor Prices',
+      'Baraat Car Decor',
+      'Fresh Flower Car Decor',
+      'Shaadi Car Styling'
+    ],
+    relatedProductSlugs: [
+      'fresh-red-rose-wedding-car-decor',
+      'bridal-handheld-white-rose-bouquet',
+      'royal-nikkah-stage-floral-setup'
+    ],
+    content: `
+      <h2>The Baraat Car: First Impression of the Big Day</h2>
+      <p>Before the baraat even reaches the venue, the decorated car sets the tone — it leads the procession, stars in the arrival photos, and carries the couple home. A well-done floral car decoration takes about an hour and transforms any car into a wedding car. Here is everything to know: styles, flowers, real prices, and booking.</p>
+
+      <h3>1. Bonnet vs Full-Car: Choosing Your Style</h3>
+      <p><strong>Bonnet + ribbon classic:</strong> A fresh-flower arrangement on the bonnet with ribbons trailing to the mirrors and door handles. Elegant, timeless, and the most popular choice — suits sedans and SUVs alike. This is our <strong>Fresh Red Rose Wedding Car Decor</strong> package.</p>
+
+      <p><strong>Full-car styling:</strong> Bonnet arrangement plus floral garlands along the roofline, door outlines, and rear styling. For couples who want the car to be a photoshoot subject in itself.</p>
+
+      <p><strong>Minimal ring + ribbon:</strong> A single floral ring on the bonnet with clean ribbon work — for modern couples who prefer understatement.</p>
+
+      <h3>2. Fresh vs Artificial: The Honest Answer</h3>
+      <p>We only do <strong>fresh flowers</strong> on wedding cars, and here is why: artificial flowers look flat in photographs, fade unevenly in sun, and — frankly — guests can tell. Fresh roses and carnations, fixed with professional floral foam and wiring, easily survive the 3–5 hour baraat journey. Our team decorates the car <strong>2–3 hours before departure</strong> so blooms are at peak freshness for every photo.</p>
+
+      <h3>3. Wedding Car Decoration Prices in Pakistan (2026)</h3>
+      <ul>
+        <li><strong>Bonnet + ribbon classic:</strong> PKR 4,999 – 7,999</li>
+        <li><strong>Full-car fresh floral styling:</strong> PKR 8,999 – 12,999</li>
+        <li><strong>Bundle with stage decor:</strong> discounted when booked with nikkah/baraat stage — ask on WhatsApp</li>
+      </ul>
+      <p>Prices vary with flower choice (premium roses vs mixed seasonal) and car size. Message <strong>0348-0735344</strong> with your car model and baraat date for an exact quote.</p>
+
+      <h3>4. How Booking Works</h3>
+      <p><strong>When to book:</strong> 3–5 days ahead is ideal; in December–February peak season, book a week ahead. Same-day car decor is possible in Lahore, Karachi and Islamabad subject to team availability — WhatsApp us as early as possible on the day.</p>
+
+      <p><strong>Where we decorate:</strong> At your home, the venue parking, or wherever the car is — our team comes to the car with all flowers and materials. Decoration takes 45–90 minutes depending on style.</p>
+
+      <p><strong>Will flowers damage the car?</strong> No. We use non-scratch bases, suction and magnetic mounts, and ribbon ties — no adhesives on paintwork, ever.</p>
+
+      <h3>5. Pro Tips for Perfect Car Photos</h3>
+      <ul>
+        <li>Match the car flowers to the bride's bouquet palette — it ties the whole baraat look together.</li>
+        <li>Schedule decoration 2–3 hours before departure, not the night before — freshness is everything.</li>
+        <li>Keep a small water spray in the car for touch-ups between venues.</li>
+      </ul>
+      <p>Combining car decor with your stage and bouquet in one booking saves money and guarantees the same floral team and palette across everything. Explore our full <a href="/wedding-decor">wedding flower decoration</a> services or browse <a href="/flower-delivery-lahore">Lahore</a>, <a href="/flower-delivery-karachi">Karachi</a> and <a href="/flower-delivery-islamabad">Islamabad</a> delivery.</p>
+    `,
+    faqs: [
+      {
+        question: 'How much does wedding car flower decoration cost in Pakistan?',
+        answer: 'Bonnet + ribbon styling costs PKR 4,999–7,999; full-car fresh floral styling runs PKR 8,999–12,999. Bundling with stage decor earns a discount.'
+      },
+      {
+        question: 'How long before the baraat should the car be decorated?',
+        answer: '2–3 hours before departure. Fresh flowers are at peak freshness for photos and easily survive the 3–5 hour baraat journey.'
+      },
+      {
+        question: 'Do flower decorations damage the car paint?',
+        answer: 'No. We use non-scratch bases, suction and magnetic mounts, and ribbon ties — never adhesives on paintwork.'
+      },
+      {
+        question: 'Can I get same-day wedding car decoration?',
+        answer: 'Yes, in Lahore, Karachi and Islamabad subject to team availability. WhatsApp 0348-0735344 as early as possible on the day.'
+      }
+    ]
+  },
 ];

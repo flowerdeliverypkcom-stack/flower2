@@ -77,6 +77,7 @@ export interface CityTargeting {
   bannerImage: string;
   faqs: { question: string; answer: string }[];
   uniqueContent?: string;
+  contentSections?: { heading: string; body: string }[];
 }
 
 export interface BlogPost {

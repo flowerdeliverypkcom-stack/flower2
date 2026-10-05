@@ -184,7 +184,7 @@ export default async function GenericLandingPage({ params }: PageProps) {
       }
     ];
   } else if (cityMatch) {
-    h1Title = cityMatch.title;
+    h1Title = cityMatch.headline;
     introText = cityMatch.intro;
     bannerImage = cityMatch.bannerImage;
     relevantProducts = PRODUCTS.filter((p) =>
@@ -347,17 +347,31 @@ export default async function GenericLandingPage({ params }: PageProps) {
         </div>
       </section>
 
-      {/* Unique City SEO Paragraph (Part 3 Requirement) */}
+      {/* Unique City SEO Content (expanded for depth) */}
       {cityMatch?.uniqueContent && (
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="p-8 sm:p-10 rounded-3xl bg-white border border-[#C5A880]/40 shadow-sm space-y-4">
+          <div className="p-8 sm:p-10 rounded-3xl bg-white border border-[#C5A880]/40 shadow-sm space-y-5">
             <h2 className="font-serif font-bold text-xl sm:text-2xl text-[#1F1F1F]">
               Same-Day Fresh Flower Delivery in {cityMatch.name} — FlowerDeliveryPK
             </h2>
             <div className="w-12 h-0.5 bg-[#C5A880]" />
-            <p className="text-sm sm:text-base text-stone-700 leading-relaxed">
-              {cityMatch.uniqueContent}
-            </p>
+            {cityMatch.uniqueContent.split('\n\n').map((para, idx) => (
+              <p key={idx} className="text-sm sm:text-base text-stone-700 leading-relaxed">
+                {para}
+              </p>
+            ))}
+            {cityMatch.contentSections?.map((section, idx) => (
+              <div key={idx} className="pt-2 space-y-3">
+                <h3 className="font-serif font-bold text-lg text-[#1F1F1F]">
+                  {section.heading}
+                </h3>
+                {section.body.split('\n\n').map((para, pIdx) => (
+                  <p key={pIdx} className="text-sm sm:text-base text-stone-700 leading-relaxed">
+                    {para}
+                  </p>
+                ))}
+              </div>
+            ))}
           </div>
         </section>
       )}

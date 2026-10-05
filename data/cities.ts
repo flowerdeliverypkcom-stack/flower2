@@ -33,9 +33,53 @@ export const CITIES: CityTargeting[] = [
       {
         question: 'Do you send a video of the bouquet before delivery in Lahore?',
         answer: 'Yes, 100%! As soon as our master florists arrange your bouquet in our studio, we send a live HD video preview to your WhatsApp before our courier leaves.'
+      },
+      {
+        question: 'What are the flower delivery charges in Lahore?',
+        answer: 'Standard same-day delivery anywhere in Lahore is a flat Rs. 250. Delivery is completely free on orders above Rs. 2,999. Midnight birthday delivery (11:30 PM - 12:15 AM) carries a Rs. 500 surcharge and needs advance booking on WhatsApp.'
+      },
+      {
+        question: 'Which areas of Lahore do you deliver flowers to?',
+        answer: 'We deliver across DHA Phases 1-9 and Prism, Gulberg, Model Town, Garden Town, Johar Town, Faisal Town, Bahria Town, Lake City, Cantt, Cavalry Ground, Askari 10 & 11, WAPDA Town, PCSIR, Shadman, Mall Road, and all surrounding societies — typically within 2 to 3 hours.'
+      },
+      {
+        question: 'How long do your roses stay fresh in Lahore\'s weather?',
+        answer: 'Our farm-fresh roses last 5 to 7 days in a vase with basic care. We cut stems at a angle on delivery morning, condition them in chilled nutrient water, and transport in temperature-controlled vans so Lahore\'s heat never touches them before arrival. Trim stems and change water every two days for maximum life.'
+      },
+      {
+        question: 'Can I customize my bouquet for flower delivery in Lahore?',
+        answer: 'Absolutely. Choose your rose colors, stem count (12 to 100+), wrapping style, and add-ons like artisan cakes, Ferrero Rocher, or teddy bears. Share your idea on WhatsApp at 0348-0735344 and our florists will design it before dispatch — with video proof, as always.'
       }
     ],
-    uniqueContent: 'Sending fresh flowers in Lahore has never been more dependable. Whether you are sending crimson red roses to DHA Phase 6, surprising a friend in Gulberg with an artisan chocolate fudge cake, or dispatching an anniversary flower box to Bahria Town, FlowerDeliveryPK is Lahore\'s premier floral studio. Our dedicated chilled delivery vehicles navigate Canal Road, Ring Road, and Main Boulevard swiftly, ensuring your delicate petals arrive crisp, dewy, and radiantly scented. Every bouquet is arranged by master florists on the morning of delivery, complemented with our signature live WhatsApp video confirmation recorded right before the courier departs. From midnight birthday surprises to milestone celebrations, trust Lahore’s dedicated local floral artisans for unmatched quality and heartfelt presentation.'
+    uniqueContent: `Lahore is Pakistan's city of celebrations — from grand Shaadi-season weddings on Canal Road to intimate birthday dinners in DHA Phase 6, flowers are the language of every occasion here. FlowerDeliveryPK is Lahore's dedicated online flower studio, hand-tying every bouquet on the morning of delivery from farm-fresh roses, lilies, carnations, and seasonal blooms. Whether you need two dozen crimson red roses for an anniversary in Gulberg, a cheerful sunflower bouquet for a friend in Model Town, or an elegant white lily arrangement for a corporate event on Mall Road, our master florists design each order after you place it — never pulled from cold storage, never a day old.
+
+Ordering takes less than two minutes. Browse the catalog, tap Order via WhatsApp, and our team instantly confirms your delivery address, preferred time slot, and a complimentary handwritten card message. Before our chilled courier leaves the studio, we record a live HD video of your exact bouquet and send it to your WhatsApp — so you see precisely what your loved one is about to receive. Our delivery vans cover DHA Phases 1 to 9, Bahria Town, Lake City, Johar Town, Cantt, WAPDA Town, and every major sector within 2 to 3 hours for orders placed before 5:00 PM.
+
+For midnight birthday surprises, reserve our 11:30 PM to 12:15 AM slot with prior WhatsApp confirmation. Overseas Pakistanis in the UK, USA, UAE, and Canada order from us daily through Wise, Remitly, and international cards, trusting our video proof to bridge the distance on birthdays, anniversaries, and Eid. With bouquets starting at Rs. 1,499 and a 100% stem-freshness guarantee on every stem, FlowerDeliveryPK has become the flower delivery service Lahore relies on for the moments that matter most.`,
+    contentSections: [
+      {
+        heading: 'Most Loved Flowers for Delivery in Lahore',
+        body: `Red roses remain Lahore's undisputed favourite — our Classic 24 Red Rose Bouquet and the grand 50-rose anniversary arrangement are the city's bestsellers year-round. Close behind are blush pink roses paired with baby's breath for birthdays, white lilies and chrysanthemums for get-well-soon and condolence gestures, and radiant sunflowers that brighten graduations and new-job congratulations. For luxury gifting, our velvet hatboxes filled with 36 premium roses and Ferrero Rocher pairings dominate anniversary orders in DHA and Bahria Town.
+
+Seasonal picks rotate through the year: peonies and ranunculus in winter wedding season, fragrant motia-inspired white arrangements in summer, and bold marigold-gerbera mixes around Basant and Eid festivities. Every arrangement can be customized — rose color, stem count, wrapping paper, and add-ons like Layers or Tehzeeb cakes, imported chocolates, and plush teddy bears — simply mention it on WhatsApp when ordering.`
+      },
+      {
+        heading: 'Flower Delivery Timings & Charges Across Lahore',
+        body: `We run express 2 to 3-hour delivery across all of Lahore for orders confirmed before 5:00 PM — DHA, Gulberg, Model Town, Johar Town, Bahria Town, Cantt, and surrounding societies included. Orders placed later are scheduled for the next morning's first dispatch wave, so your flowers still arrive farm-fresh.
+
+Delivery is free on all orders above Rs. 2,999. Standard same-day delivery is a flat Rs. 250 anywhere in the city. Our midnight birthday slot (11:30 PM to 12:15 AM) carries a small Rs. 500 surcharge and must be booked in advance on WhatsApp at 0348-0735344, as only a limited number of midnight routes run each night. Corporate and wedding bulk orders across Lahore receive custom quotes with dedicated van scheduling.`
+      },
+      {
+        heading: 'Send Flowers to Lahore from the UK, USA & UAE',
+        body: `Nearly half of our Lahore orders come from overseas Pakistanis sending love home. The process is built for you: order on WhatsApp in English or Urdu, pay securely via Wise, Remitly, Revolut, Western Union, or any international debit or credit card, and receive a live video of the actual bouquet before it ships — many customers forward that video to family as a teaser. We handle everything else: navigating to DHA street addresses, calling the recipient on arrival, and confirming delivery with a photo on WhatsApp.
+
+Peak overseas ordering hits around Eid, Mother's Day, Valentine's Day, and December wedding season — book a day ahead during those weeks and your flowers are guaranteed on time.`
+      },
+      {
+        heading: 'Why Lahore Trusts FlowerDeliveryPK',
+        body: `Three things set us apart in Lahore's crowded flower market. First, genuine farm-fresh sourcing: our roses arrive from farms the same morning, conditioned in chilled water, and arranged to order — which is why our petals stay vivid for 5 to 7 days in a vase. Second, radical transparency: the WhatsApp dispatch video means no surprises, no stock-photo disappointments. Third, Lahore-born service: our riders know every phase of DHA, every block of Johar Town, and every society gate procedure, so deliveries don't get lost or delayed. Thousands of verified deliveries across the city back every claim on this page.`
+      }
+    ]
   },
   {
     name: 'Karachi',
@@ -68,9 +112,53 @@ export const CITIES: CityTargeting[] = [
       {
         question: 'Can I send flowers to Karachi from the UK, USA, or UAE?',
         answer: 'Yes! Overseas Pakistanis can order via WhatsApp at 0348-0735344 and pay securely with Wise, Remitly, Revolut, or international credit/debit cards.'
+      },
+      {
+        question: 'How fast is flower delivery in DHA and Clifton Karachi?',
+        answer: 'We deliver within 2 to 4 hours across DHA Phases 1-8 and Clifton Blocks 1-9 for orders confirmed before 5:00 PM. Delivery is free on orders above Rs. 3,500 in these areas.'
+      },
+      {
+        question: 'Do your flowers survive Karachi\'s heat during delivery?',
+        answer: 'Yes. Every stem travels in temperature-regulated vans with water tubes attached to the bases, and bouquets are conditioned in chilled nutrient water before dispatch. Our roses stay fresh 5 to 7 days in a vase even in Karachi\'s climate.'
+      },
+      {
+        question: 'Can I order flowers in Karachi with cash on delivery?',
+        answer: 'Yes, we offer Cash on Delivery across Karachi, alongside bank transfer, debit/credit cards, and international options like Wise and Remitly for overseas customers.'
+      },
+      {
+        question: 'Do you deliver flowers to Bahria Town Karachi?',
+        answer: 'Yes, we deliver to Bahria Town Karachi including all precincts. Because of the distance, please order before 3:00 PM for guaranteed same-day delivery there.'
       }
     ],
-    uniqueContent: 'Karachi\'s dynamic pace and coastal climate demand exceptional flower handling, and FlowerDeliveryPK delivers with perfection. From the seafront homes of Clifton and Defense (DHA Phase 1-8) to family celebrations in PECHS, Gulshan-e-Iqbal, and Bahria Town Karachi, our temperature-regulated couriers guarantee your flowers remain vibrant despite the city\'s warmth. We specialize in long-stem imported roses, exotic lilies, and bespoke cake-and-flower combos sourced from Karachi’s finest artisan bakeries. For overseas Pakistanis in the UK, USA, and UAE wishing to celebrate their parents or spouse in Karachi, our frictionless Wise and credit card ordering paired with live WhatsApp video proof makes sending love home effortless and completely reassuring.'
+    uniqueContent: `Karachi moves fast, celebrates big, and expects flowers to keep up — which is exactly what FlowerDeliveryPK was built for. From anniversary dinners at Kolachi and birthday surprises in DHA Phase 8 to corporate bouquets delivered to offices on Shahrah-e-Faisal, we handcraft every arrangement on the morning of delivery from farm-fresh roses, lilies, carnations, orchids, and seasonal blooms. Our Karachi studio specializes in flowers that survive the city's coastal heat: every stem travels in temperature-regulated vans with water tubes on the bases, so your bouquet arrives as crisp as the moment it was tied.
+
+Ordering is effortless. Pick your bouquet, tap Order via WhatsApp, and our team confirms the address, time slot, and a free handwritten card message within minutes. Before dispatch, we send you a live HD video of your exact flowers — particularly loved by overseas Pakistanis who want proof before surprising parents in Gulshan-e-Iqbal or a spouse in Clifton. We cover DHA Phases 1 to 8, Clifton Blocks 1 to 9, PECHS, Bahadurabad, Gulshan-e-Iqbal, Gulistan-e-Johar, North Nazimabad, Federal B Area, KDA Scheme 1, Tariq Road, and Bahria Town Karachi, with 2 to 4-hour same-day delivery on orders placed before 5:00 PM.
+
+Karachi's wedding season, Eid holidays, and Valentine's week are our busiest periods — book a day ahead and your slot is guaranteed. With bouquets starting at Rs. 1,499, midnight birthday delivery on request, and payments via bank transfer, cards, Wise, and Remitly, sending flowers in Karachi has never been this dependable.`,
+    contentSections: [
+      {
+        heading: 'Best Flowers to Send in Karachi\u2019s Climate',
+        body: `Karachi's warmth and humidity punish delicate blooms, so we recommend varieties bred for resilience: long-stem red and pink roses (our bestsellers, lasting 5 to 7 days), hardy carnations, vibrant gerberas, and elegant lilies that open beautifully over several days. For luxury statements, our velvet hatboxes with 36 premium roses and imported orchid arrangements hold up remarkably well in air-conditioned homes and offices.
+
+Avoid overly delicate sweet peas or unconditioned tulips in peak summer — our florists will steer you toward seasonal winners instead. Every bouquet includes flower food sachets and a care card in English and Urdu, and our WhatsApp team happily advises on the longest-lasting pick for your budget and occasion.`
+      },
+      {
+        heading: 'Flower Delivery Timings & Charges in Karachi',
+        body: `Same-day express delivery runs 2 to 4 hours across Karachi for orders confirmed before 5:00 PM, covering DHA, Clifton, PECHS, Gulshan, North Nazimabad, and Bahria Town Karachi. Deliveries to Bahria Town Karachi and far North Karachi may take the full window due to distance — order before 3:00 PM for guaranteed same-day arrival there.
+
+Delivery is free on orders above Rs. 3,500 across DHA and Clifton, and standard same-day delivery is Rs. 300 citywide. Midnight birthday surprises (11:30 PM to 12:15 AM) are available on advance booking with a Rs. 500 surcharge. During Eid and Valentine's week, we add extra vans — but slots still fill, so early booking is wise.`
+      },
+      {
+        heading: 'Send Flowers to Karachi from Abroad',
+        body: `A huge share of our Karachi orders comes from the diaspora — sons in London surprising mothers in PECHS, husbands in Dubai sending anniversary roses to Clifton, daughters in Toronto ordering Eid bouquets for Gulshan. Order on WhatsApp, pay with Wise, Remitly, Revolut, or international cards, and get a live video of the bouquet before it leaves our studio. We coordinate directly with recipients, navigate apartment buildings and society gates, and send you photo confirmation on delivery.
+
+If the recipient's address is tricky — a new Bahria Town Karachi precinct, for instance — share their phone number and our rider will call on arrival. Distance should never dilute a celebration.`
+      },
+      {
+        heading: 'Why Karachi Chooses FlowerDeliveryPK',
+        body: `Karachi customers stay with us for three reasons: climate-proof logistics (chilled vans, water-tubed stems, morning-fresh sourcing), total transparency (the dispatch video eliminates every doubt), and city-wide reliability (our riders know DHA's phases, Clifton's blocks, and Gulshan's sectors by heart). From a single red rose sleeve to 100-rose grand gestures and corporate event florals, every order gets the same obsessive freshness standard — backed by thousands of verified deliveries across the city.`
+      }
+    ]
   },
   {
     name: 'Islamabad',
@@ -103,9 +191,53 @@ export const CITIES: CityTargeting[] = [
       {
         question: 'Can I add an artisan bakery cake to an Islamabad flower delivery?',
         answer: 'Yes! We partner with premier Islamabad bakeries (such as Tehzeeb and Layers) to deliver fresh chocolate fudge cakes together with your roses.'
+      },
+      {
+        question: 'Do you deliver flowers to Bahria Town Islamabad and DHA Islamabad?',
+        answer: 'Yes. We deliver same-day to Bahria Town Islamabad (Phases 1-8), DHA Islamabad (Phases 1 & 2), Gulberg Greens, and Naval Anchorage within 2 to 3 hours for orders placed before 5:00 PM.'
+      },
+      {
+        question: 'Can you deliver flowers to offices in Blue Area?',
+        answer: 'Absolutely. We deliver daily to Blue Area, Jinnah Avenue offices, and corporate towers across Islamabad, with discreet handover at reception and prior coordination if needed.'
+      },
+      {
+        question: 'What are your flower delivery charges in Islamabad?',
+        answer: 'Delivery is free on orders above Rs. 3,000 across Islamabad\'s F and E sectors. Standard same-day delivery elsewhere in the capital is Rs. 250. Midnight delivery carries a Rs. 500 surcharge.'
+      },
+      {
+        question: 'How do I order flowers for a wedding in Islamabad?',
+        answer: 'For weddings, Nikkah ceremonies, and bridal bouquets, message us on WhatsApp at 0348-0735344 at least 48 hours ahead. We offer bridal bouquets, stage florals, and car decor with on-site setup across Islamabad and Rawalpindi.'
       }
     ],
-    uniqueContent: 'In the serene capital city of Islamabad, gifting should mirror the city\'s refined elegance. FlowerDeliveryPK provides Islamabad residents and overseas senders with hand-curated floral luxury across sectors F-6, F-7, F-8, F-10, E-7, Blue Area, Bahria Town, and DHA Islamabad. Each arrangement is composed of farm-fresh blooms, artfully framed in matte paper and rich gold satin. We know the high standards of diplomatic enclaves and upscale residential sectors, ensuring that bouquets, gourmet confectionery hampers, and personalized congratulatory notes are hand-delivered with immaculate presentation. With real-time WhatsApp dispatch videos and prompt courier updates, your heartfelt sentiments reach Islamabad with flawless poise.'
+    uniqueContent: `Islamabad celebrates with quiet elegance — anniversaries in F-7 drawing rooms, birthdays in Bahria Town farmhouses, corporate milestones in Blue Area towers, and wedding festivities across DHA Islamabad. FlowerDeliveryPK brings the capital a true luxury florist experience: hand-tied bouquets crafted the same morning from premium roses, lilies, orchids, carnations, and seasonal blooms, delivered in 2 to 3 hours across F-6, F-7, F-8, F-10, F-11, E-7, G-10, G-11, I-8, Blue Area, Naval Anchorage, Gulberg Greens, and Bahria Town.
+
+Our Islamabad service is built around discretion and precision. Diplomatic Enclave adjacent deliveries, executive office surprises, and society-gate protocols are handled daily by courteous riders trained in white-glove etiquette. Order in under two minutes on WhatsApp, add a complimentary handwritten card message, and receive a live HD video of your exact bouquet before our chilled van departs — the reassurance our customers, especially overseas Pakistanis, value most.
+
+Margalla's pleasant climate is kind to flowers, and our morning-cut stems routinely last a full week in the vase. From a single long-stem red rose to 100-rose grand gestures, midnight birthday slots to bulk wedding florals, Islamabad trusts FlowerDeliveryPK for freshness that matches the city's standards.`,
+    contentSections: [
+      {
+        heading: 'Elegant Flower Choices for Islamabad Homes and Offices',
+        body: `Islamabad's taste leans refined: long-stem red and white roses for anniversaries, pastel pink rose and baby's breath combinations for birthdays, pure white lilies for condolences and get-well-soon gestures, and exotic orchids for executive gifting. Our velvet hatboxes — 36 roses in keepsake round boxes — are the capital's signature luxury gift, while cake-and-flower combos from the city's finest bakeries dominate birthday orders in Bahria Town and DHA Islamabad.
+
+For weddings and Nikkah ceremonies, we design stage-adjacent florals, bridal bouquets, and car decor with advance booking. Mention your event date on WhatsApp and our team will schedule florist consultation alongside your delivery.`
+      },
+      {
+        heading: 'Delivery Timings and Charges in Islamabad',
+        body: `Express 2 to 3-hour delivery covers all Islamabad sectors for orders confirmed before 5:00 PM — F and E series sectors, G-10 through G-13, I-8, Blue Area, and the housing societies. Bahria Town Islamabad (Phases 1 to 8), DHA Islamabad, and Gulberg Greens fall in the same express window.
+
+Delivery is free on orders above Rs. 3,000 across the F and E sectors. Standard same-day delivery elsewhere in the capital is Rs. 250. Our midnight birthday slot (11:30 PM to 12:15 AM) is available on advance WhatsApp booking with a Rs. 500 surcharge — a favourite for surprising loved ones in F-11 and Bahria Town at the stroke of twelve.`
+      },
+      {
+        heading: 'Sending Flowers to Islamabad from Overseas',
+        body: `The capital receives a large share of our diaspora orders — professionals in the Gulf, families in the UK and North America, all sending love to Islamabad. Pay via Wise, Remitly, Revolut, or international cards, approve your bouquet over the live dispatch video, and we handle the rest: society gate entries, apartment intercoms, and recipient coordination, finishing with photo confirmation on your WhatsApp.
+
+Embassy and institutional addresses are no problem — share the relevant extension or gate pass detail and our rider follows protocol. Many overseas customers schedule recurring monthly bouquets for parents; ask us about subscription-style standing orders.`
+      },
+      {
+        heading: 'Why Islamabad Chooses FlowerDeliveryPK',
+        body: `Islamabad demands reliability, and we deliver it four ways: morning-cut farm-fresh stems conditioned for a 7-day vase life, the live WhatsApp video proof before every dispatch, riders trained for the capital's sectors, societies, and institutional protocols, and transparent pricing with no hidden charges. From E-7 to Bahria Town, thousands of on-time deliveries have made us the flower delivery name Islamabad recommends to friends.`
+      }
+    ]
   },
   {
     name: 'Rawalpindi',

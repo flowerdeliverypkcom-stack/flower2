@@ -47,12 +47,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   if (categoryMatch) {
-    const title = categoryMatch.group === 'decor'
-      ? `${categoryMatch.name} in Pakistan | Wedding & Event Florist - FlowerDeliveryPK`
-      : `Fresh ${categoryMatch.name} Delivery in Pakistan | FlowerDeliveryPK`;
-    const description = categoryMatch.group === 'decor'
-      ? `${categoryMatch.description} Professional on-site floral setup in Lahore, Karachi & Islamabad. Book consultation on WhatsApp: 0348-0735344.`
-      : `${categoryMatch.description} Same-day 2–3 hour delivery across Lahore, Karachi, Islamabad & nationwide with live WhatsApp video proof.`;
+    const title = categoryMatch.seoTitle
+      || (categoryMatch.group === 'decor'
+        ? `${categoryMatch.name} in Pakistan | Wedding & Event Florist - FlowerDeliveryPK`
+        : `Fresh ${categoryMatch.name} Delivery in Pakistan | FlowerDeliveryPK`);
+    const description = categoryMatch.seoDescription
+      || (categoryMatch.group === 'decor'
+        ? `${categoryMatch.description} Professional on-site floral setup in Lahore, Karachi & Islamabad. Book consultation on WhatsApp: 0348-0735344.`
+        : `${categoryMatch.description} Same-day 2–3 hour delivery across Lahore, Karachi, Islamabad & nationwide with live WhatsApp video proof.`);
     return {
       title,
       description,
@@ -127,15 +129,18 @@ export default async function GenericLandingPage({ params }: PageProps) {
   let faqs: { question: string; answer: string }[] = [];
 
   if (categoryMatch) {
-    h1Title = categoryMatch.group === 'decor' 
-      ? `${categoryMatch.name} Services in Pakistan` 
-      : `Fresh ${categoryMatch.name} Delivery in Pakistan`;
+    h1Title = categoryMatch.h1
+      || (categoryMatch.group === 'decor'
+        ? `${categoryMatch.name} Services in Pakistan`
+        : `Fresh ${categoryMatch.name} Delivery in Pakistan`);
     introText = categoryMatch.description;
     bannerImage = categoryMatch.image;
     relevantProducts = PRODUCTS.filter(
       (p) => p.categorySlug === categoryMatch.slug || p.category.toLowerCase().includes(categoryMatch.name.toLowerCase())
     );
-    if (categoryMatch.group === 'decor') {
+    if (categoryMatch.faqs && categoryMatch.faqs.length > 0) {
+      faqs = categoryMatch.faqs;
+    } else if (categoryMatch.group === 'decor') {
       faqs = [
         {
           question: `How far in advance should I book ${categoryMatch.name}?`,
@@ -361,6 +366,35 @@ export default async function GenericLandingPage({ params }: PageProps) {
               </p>
             ))}
             {cityMatch.contentSections?.map((section, idx) => (
+              <div key={idx} className="pt-2 space-y-3">
+                <h3 className="font-serif font-bold text-lg text-[#1F1F1F]">
+                  {section.heading}
+                </h3>
+                {section.body.split('\n\n').map((para, pIdx) => (
+                  <p key={pIdx} className="text-sm sm:text-base text-stone-700 leading-relaxed">
+                    {para}
+                  </p>
+                ))}
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Unique Category SEO Content (expanded for depth) */}
+      {categoryMatch?.longContent && (
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="p-8 sm:p-10 rounded-3xl bg-white border border-[#C5A880]/40 shadow-sm space-y-5">
+            <h2 className="font-serif font-bold text-xl sm:text-2xl text-[#1F1F1F]">
+              {categoryMatch.h1 || `${categoryMatch.name} Services in Pakistan`} — FlowerDeliveryPK
+            </h2>
+            <div className="w-12 h-0.5 bg-[#C5A880]" />
+            {categoryMatch.longContent.split('\n\n').map((para, idx) => (
+              <p key={idx} className="text-sm sm:text-base text-stone-700 leading-relaxed">
+                {para}
+              </p>
+            ))}
+            {categoryMatch.contentSections?.map((section, idx) => (
               <div key={idx} className="pt-2 space-y-3">
                 <h3 className="font-serif font-bold text-lg text-[#1F1F1F]">
                   {section.heading}

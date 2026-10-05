@@ -53,6 +53,12 @@ export interface Category {
   description: string;
   image: string;
   itemCount: number;
+  seoTitle?: string;
+  seoDescription?: string;
+  h1?: string;
+  longContent?: string;
+  contentSections?: { heading: string; body: string }[];
+  faqs?: { question: string; answer: string }[];
 }
 
 export interface Occasion {

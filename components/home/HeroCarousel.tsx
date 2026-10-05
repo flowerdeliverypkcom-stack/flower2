@@ -55,6 +55,18 @@ const SLIDES: SlideData[] = [
     image: '/images/banners/hero-slide-3.webp',
     alt: 'Fresh rose bouquet and birthday cake combo gift set - FlowerDeliveryPK',
     badge: 'Over 10,000+ Happy Celebrations'
+  },
+  {
+    id: 4,
+    label: 'NEW ARRIVAL',
+    title: 'The Midnight Bloom',
+    highlightText: 'Red Rose Bouquet',
+    subtext: 'Twenty velvety red roses in dramatic matte black wrap with satin ribbon. Our most striking romantic bouquet — now live on FlowerDeliveryPK.',
+    ctaText: 'Shop Midnight Bloom',
+    ctaLink: '/product/midnight-bloom-red-rose-bouquet',
+    image: '/images/banners/hero-slide-4.webp',
+    alt: 'The Midnight Bloom red rose bouquet in black wrapping - FlowerDeliveryPK Pakistan',
+    badge: 'Just Launched'
   }
 ];
 

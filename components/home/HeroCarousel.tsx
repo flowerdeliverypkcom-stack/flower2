@@ -23,8 +23,8 @@ const SLIDES: SlideData[] = [
   {
     id: 1,
     label: 'BOUQUET OF THE MONTH',
-    title: 'Handcrafted Fresh',
-    highlightText: 'Red Rose Bouquets',
+    title: 'Online Flower Delivery in',
+    highlightText: 'Pakistan',
     subtext: 'Farm-fresh Grade-A Ecuadorian & local roses hand-tied by master florists. Includes live HD WhatsApp video preview before dispatch.',
     ctaText: 'Explore Bouquets',
     ctaLink: '/red-rose-bouquets',
@@ -128,6 +128,9 @@ export default function HeroCarousel() {
         <div className="relative min-h-[500px] sm:min-h-[520px] lg:min-h-[480px]">
           {SLIDES.map((slide, index) => {
             const isActive = index === currentSlide;
+            // SEO: only the first slide renders an <h1>; other slides use <h2>
+            // with identical styling so the page has exactly one H1.
+            const HeadingTag = index === 0 ? 'h1' : 'h2';
 
             return (
               <div
@@ -155,12 +158,12 @@ export default function HeroCarousel() {
                     </div>
 
                     {/* Main Heading */}
-                    <h1 className="font-serif text-3xl xs:text-4xl sm:text-5xl lg:text-[50px] font-bold text-[#1F1F1F] tracking-tight leading-[1.16]">
+                    <HeadingTag className="font-serif text-3xl xs:text-4xl sm:text-5xl lg:text-[50px] font-bold text-[#1F1F1F] tracking-tight leading-[1.16]">
                       {slide.title}{' '}
                       <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8B1538] via-[#a81c45] to-[#6e102c] block sm:inline">
                         {slide.highlightText}
                       </span>
-                    </h1>
+                    </HeadingTag>
 
                     {/* Subtext */}
                     <p className="text-sm sm:text-base text-stone-600 max-w-xl mx-auto lg:mx-0 leading-relaxed">

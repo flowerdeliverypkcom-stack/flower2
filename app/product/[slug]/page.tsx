@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { PRODUCTS } from '@/data/products';
 import { FAQS } from '@/data/faqs';
-import { getProductSchema, getFAQSchema, getBreadcrumbSchema } from '@/utils/schema';
+import { getProductSchema, getFAQSchema, getBreadcrumbSchema, SITE_URL } from '@/utils/schema';
 import ProductDetailClient from '@/components/product/ProductDetailClient';
 
 interface PageProps {
@@ -28,12 +28,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title,
     description,
     alternates: {
-      canonical: `https://flowerdeliverypk.com/product/${product.slug}`
+      canonical: `${SITE_URL}/product/${product.slug}`
     },
     openGraph: {
       title,
       description,
-      url: `https://flowerdeliverypk.com/product/${product.slug}`,
+      url: `${SITE_URL}/product/${product.slug}`,
       images: [
         {
           url: mainImage,

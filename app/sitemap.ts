@@ -4,16 +4,13 @@ import { CATEGORIES } from '@/data/categories';
 import { OCCASIONS } from '@/data/occasions';
 import { CITIES } from '@/data/cities';
 import { BLOG_POSTS } from '@/data/blogs';
+import { SITE_URL } from '@/utils/schema';
 
-const BASE_URL = 'https://flowerdeliverypk.com';
+const BASE_URL = SITE_URL;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     '',
-    '/cart',
-    '/checkout',
-    '/wishlist',
-    '/search',
     '/same-day-flower-delivery',
     '/blog',
     '/about',

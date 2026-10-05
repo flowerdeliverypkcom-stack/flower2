@@ -4,17 +4,18 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { BLOG_POSTS } from '@/data/blogs';
 import { Clock, ArrowRight } from 'lucide-react';
+import { SITE_URL } from '@/utils/schema';
 
 export const metadata: Metadata = {
   title: 'Flower & Gift Gifting Guides & Blog | FlowerDeliveryPK',
   description: 'Read expert Pakistani floristry guides: birthday flowers in Lahore, sending gifts from UK/USA/UAE, rose colors meanings, and cake delivery advice.',
   alternates: {
-    canonical: 'https://flowerdeliverypk.com/blog'
+    canonical: `${SITE_URL}/blog`
   },
   openGraph: {
     title: 'FlowerDeliveryPK Blog — Floristry & Gifting Guides',
     description: 'Expert tips on choosing flowers, cakes, and gifts delivered same-day across Pakistan.',
-    url: 'https://flowerdeliverypk.com/blog',
+    url: `${SITE_URL}/blog`,
     images: ['/images/banners/hero-slide-1.webp']
   }
 };

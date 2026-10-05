@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { BLOG_POSTS } from '@/data/blogs';
 import { PRODUCTS } from '@/data/products';
-import { getArticleSchema, getBreadcrumbSchema } from '@/utils/schema';
+import { getArticleSchema, getBreadcrumbSchema, SITE_URL } from '@/utils/schema';
 import ProductCard from '@/components/product/ProductCard';
 import { Clock, Calendar, User, MessageCircle, ArrowRight } from 'lucide-react';
 import { WHATSAPP_BASE_URL, WHATSAPP_NUMBER } from '@/utils/whatsapp';
@@ -31,12 +31,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title,
     description,
     alternates: {
-      canonical: `https://flowerdeliverypk.com/blog/${post.slug}`
+      canonical: `${SITE_URL}/blog/${post.slug}`
     },
     openGraph: {
       title,
       description,
-      url: `https://flowerdeliverypk.com/blog/${post.slug}`,
+      url: `${SITE_URL}/blog/${post.slug}`,
       images: [
         {
           url: post.featuredImage,

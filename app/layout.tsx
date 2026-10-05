@@ -3,7 +3,7 @@ import { Playfair_Display, Inter } from 'next/font/google';
 import './globals.css';
 import { CartProvider } from '@/context/CartContext';
 import SiteLayout from '@/components/layout/SiteLayout';
-import { getOrganizationSchema, getLocalBusinessSchema } from '@/utils/schema';
+import { getOrganizationSchema, getLocalBusinessSchema, SITE_URL } from '@/utils/schema';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -25,9 +25,9 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://flowerdeliverypk.com'),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: 'FlowerDeliveryPK.com — Online Flowers, Bouquets & Gifts Delivery in Pakistan',
+    default: 'Flower Delivery Pakistan | Same-Day Online Flower Delivery – FlowerDeliveryPK.com',
     template: '%s | FlowerDeliveryPK.com'
   },
   description: 'Send fresh flower bouquets, red roses, birthday cakes & luxury gift boxes across Pakistan (Lahore, Karachi, Islamabad, Rawalpindi & more). Same-day delivery with easy WhatsApp ordering.',
@@ -60,9 +60,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://flowerdeliverypk.com',
+    url: SITE_URL,
     siteName: 'FlowerDeliveryPK.com',
-    title: 'FlowerDeliveryPK.com — Online Flowers, Bouquets & Gifts Delivery in Pakistan',
+    title: 'Flower Delivery Pakistan | Same-Day Online Flower Delivery – FlowerDeliveryPK.com',
     description: 'Fresh flower bouquets & luxury gifts delivered same-day across Lahore, Karachi, Islamabad & all major cities in Pakistan. Order on WhatsApp: 0348-0735344.',
     images: [
       {

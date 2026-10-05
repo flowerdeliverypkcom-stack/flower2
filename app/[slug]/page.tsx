@@ -10,7 +10,7 @@ import { CITIES } from '@/data/cities';
 import { WHATSAPP_BASE_URL, WHATSAPP_NUMBER } from '@/utils/whatsapp';
 import ProductGrid from '@/components/product/ProductGrid';
 import { MessageCircle, Sparkles, Truck, Video, ShieldCheck, CheckCircle2, Clock, MapPin } from 'lucide-react';
-import { getFAQSchema, getBreadcrumbSchema } from '@/utils/schema';
+import { getFAQSchema, getBreadcrumbSchema, SITE_URL } from '@/utils/schema';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -28,12 +28,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: cityMatch.title,
       description: `${cityMatch.intro} Same-day chilled delivery in 2–3 hours with live WhatsApp video proof. Order on WhatsApp: 0348-0735344.`,
       alternates: {
-        canonical: `https://flowerdeliverypk.com/${cityMatch.slug}`
+        canonical: `${SITE_URL}/${cityMatch.slug}`
       },
       openGraph: {
         title: cityMatch.title,
         description: cityMatch.intro,
-        url: `https://flowerdeliverypk.com/${cityMatch.slug}`,
+        url: `${SITE_URL}/${cityMatch.slug}`,
         images: [
           {
             url: cityMatch.bannerImage || '/images/banners/hero-slide-1.webp',
@@ -57,12 +57,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title,
       description,
       alternates: {
-        canonical: `https://flowerdeliverypk.com/${categoryMatch.slug}`
+        canonical: `${SITE_URL}/${categoryMatch.slug}`
       },
       openGraph: {
         title,
         description,
-        url: `https://flowerdeliverypk.com/${categoryMatch.slug}`,
+        url: `${SITE_URL}/${categoryMatch.slug}`,
         images: [
           {
             url: categoryMatch.image || '/images/banners/hero-slide-1.webp',
@@ -82,12 +82,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title,
       description,
       alternates: {
-        canonical: `https://flowerdeliverypk.com/${occasionMatch.slug}`
+        canonical: `${SITE_URL}/${occasionMatch.slug}`
       },
       openGraph: {
         title,
         description,
-        url: `https://flowerdeliverypk.com/${occasionMatch.slug}`,
+        url: `${SITE_URL}/${occasionMatch.slug}`,
         images: [
           {
             url: occasionMatch.bannerImage || '/images/banners/hero-slide-1.webp',
@@ -101,7 +101,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: 'FlowerDeliveryPK.com — Online Flowers, Bouquets & Gifts Delivery in Pakistan'
+    title: 'Flower Delivery Pakistan | Same-Day Online Flower Delivery – FlowerDeliveryPK.com'
   };
 }
 

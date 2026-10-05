@@ -18,6 +18,19 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: path.resolve(__dirname),
   },
+  async redirects() {
+    return [
+      {
+        // Permanent (308) redirect: non-www -> www canonical domain.
+        // Only applies when the request actually reaches the app on the
+        // apex domain (edge-level domain redirects, if any, run first).
+        source: '/:path*',
+        has: [{ type: 'host', value: 'flowerdeliverypk.com' }],
+        destination: 'https://www.flowerdeliverypk.com/:path*',
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

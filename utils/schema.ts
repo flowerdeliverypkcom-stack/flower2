@@ -1,7 +1,7 @@
 import { BlogPost, Product } from '@/types';
 import { INSTAGRAM_URL, WHATSAPP_CHANNEL_URL, WHATSAPP_BASE_URL } from '@/utils/whatsapp';
 
-export const SITE_URL = 'https://flowerdeliverypk.com';
+export const SITE_URL = 'https://www.flowerdeliverypk.com';
 export const BRAND_NAME = 'FlowerDeliveryPK.com';
 
 export function getOrganizationSchema() {

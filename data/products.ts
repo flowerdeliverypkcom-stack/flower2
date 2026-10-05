@@ -886,5 +886,41 @@ export const PRODUCTS: Product[] = [
     },
     dimensions: 'H: 7ft x W: 10ft',
     inStock: true
+  },
+  {
+    id: 'fb-21',
+    slug: 'midnight-bloom-red-rose-bouquet',
+    name: 'The Midnight Bloom – Red Rose Bouquet',
+    shortDescription: 'Dramatic red roses in signature black wrap — our most striking romantic bouquet.',
+    description: 'Make a bold, unforgettable statement with The Midnight Bloom. Twenty velvety red roses hand-tied with delicate white accents and fresh greens, wrapped in dramatic matte black paper with a luxurious satin ribbon and signature gift tag. This is the bouquet for grand romantic gestures — anniversaries, Valentine’s Day surprises, and midnight proposals across Pakistan.',
+    price: 4499,
+    originalPrice: 5499,
+    discountPercentage: 18,
+    rating: 5.0,
+    reviewsCount: 0,
+    isBestSeller: false,
+    isNew: true,
+    isFeatured: true,
+    category: 'Red Roses',
+    categorySlug: 'red-rose-bouquets',
+    flowerTypes: ['Red Roses', 'Seasonal White Fillers', 'Fresh Greens'],
+    occasions: ['Anniversary', 'Valentine\'s Day', 'Romantic', 'Birthday'],
+    cities: ['Lahore', 'Karachi', 'Islamabad', 'Rawalpindi', 'Faisalabad', 'Multan', 'Peshawar'],
+    images: [
+      '/images/products/midnight-bloom-red-rose-bouquet.webp'
+    ],
+    flowerDetails: {
+      stemCount: 20,
+      wrapperColor: 'Matte Black with Satin Ribbon',
+      fragrance: 'Rich Sweet Floral',
+      lifespan: '5-7 Days with Proper Care'
+    },
+    dimensions: 'H: 55cm x W: 40cm',
+    careInstructions: [
+      'Trim stems at a 45-degree angle before placing in fresh water.',
+      'Keep away from direct sunlight.',
+      'Change flower water every 2 days.'
+    ],
+    inStock: true
   }
 ];

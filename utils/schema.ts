@@ -85,11 +85,6 @@ export function getProductSchema(product: Product) {
         '@type': 'Organization',
         name: BRAND_NAME
       }
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: product.rating,
-      reviewCount: product.reviewsCount
     }
   };
 }
